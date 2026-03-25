@@ -1,0 +1,17 @@
+title: IC
+description: "Your site description here"
+url: "https://almostawake.github.io"
+baseurl: "/ic-website"
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md

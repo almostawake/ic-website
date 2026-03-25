@@ -1,0 +1,32 @@
+<nav class="fixed top-0 w-full z-50 backdrop-blur-lg bg-gray-950/70 border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="{{ '/' | relative_url }}" class="text-xl font-bold tracking-tight bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+      {{ site.title }}
+    </a>
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#features" class="text-sm text-gray-400 hover:text-white transition">Features</a>
+      <a href="#about" class="text-sm text-gray-400 hover:text-white transition">About</a>
+      <a href="#contact" class="text-sm text-gray-400 hover:text-white transition">Contact</a>
+      <a href="#contact" class="text-sm px-4 py-2 rounded-full bg-indigo-500 hover:bg-indigo-400 text-white font-medium transition">
+        Get Started
+      </a>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button @click="mobileMenu = !mobileMenu" class="md:hidden text-gray-400 hover:text-white">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path x-show="!mobileMenu" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        <path x-show="mobileMenu" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div x-show="mobileMenu" x-transition class="md:hidden px-6 pb-4 space-y-3">
+    <a href="#features" class="block text-gray-400 hover:text-white transition">Features</a>
+    <a href="#about" class="block text-gray-400 hover:text-white transition">About</a>
+    <a href="#contact" class="block text-gray-400 hover:text-white transition">Contact</a>
+  </div>
+</nav>
