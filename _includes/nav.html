@@ -1,21 +1,22 @@
-<nav class="fixed top-0 w-full z-50 backdrop-blur-lg bg-gray-950/70 border-b border-white/5">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="{{ '/' | relative_url }}" class="text-xl font-bold tracking-tight bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-ic-cloud">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="{{ '/' | relative_url }}" class="text-xl font-bold tracking-tight text-ic-navy">
       {{ site.title }}
     </a>
 
     <!-- Desktop nav -->
     <div class="hidden md:flex items-center gap-8">
-      <a href="#features" class="text-sm text-gray-400 hover:text-white transition">Features</a>
-      <a href="#about" class="text-sm text-gray-400 hover:text-white transition">About</a>
-      <a href="#contact" class="text-sm text-gray-400 hover:text-white transition">Contact</a>
-      <a href="#contact" class="text-sm px-4 py-2 rounded-full bg-indigo-500 hover:bg-indigo-400 text-white font-medium transition">
-        Get Started
+      <a href="#about" class="text-sm text-ic-muted hover:text-ic-navy transition">About</a>
+      <a href="#services" class="text-sm text-ic-muted hover:text-ic-navy transition">Services</a>
+      <a href="#testimonials" class="text-sm text-ic-muted hover:text-ic-navy transition">Testimonials</a>
+      <a href="#facilities" class="text-sm text-ic-muted hover:text-ic-navy transition">Facilities</a>
+      <a href="#contact" class="text-sm px-5 py-2 rounded-full bg-ic-sage hover:bg-ic-sage/90 text-white font-medium transition">
+        Get in Touch
       </a>
     </div>
 
     <!-- Mobile hamburger -->
-    <button @click="mobileMenu = !mobileMenu" class="md:hidden text-gray-400 hover:text-white">
+    <button @click="mobileMenu = !mobileMenu" class="md:hidden text-ic-muted hover:text-ic-navy">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path x-show="!mobileMenu" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         <path x-show="mobileMenu" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -24,9 +25,11 @@
   </div>
 
   <!-- Mobile menu -->
-  <div x-show="mobileMenu" x-transition class="md:hidden px-6 pb-4 space-y-3">
-    <a href="#features" class="block text-gray-400 hover:text-white transition">Features</a>
-    <a href="#about" class="block text-gray-400 hover:text-white transition">About</a>
-    <a href="#contact" class="block text-gray-400 hover:text-white transition">Contact</a>
+  <div x-show="mobileMenu" x-transition class="md:hidden px-6 pb-4 space-y-3 bg-white">
+    <a href="#about" @click="mobileMenu = false" class="block text-ic-muted hover:text-ic-navy transition">About</a>
+    <a href="#services" @click="mobileMenu = false" class="block text-ic-muted hover:text-ic-navy transition">Services</a>
+    <a href="#testimonials" @click="mobileMenu = false" class="block text-ic-muted hover:text-ic-navy transition">Testimonials</a>
+    <a href="#facilities" @click="mobileMenu = false" class="block text-ic-muted hover:text-ic-navy transition">Facilities</a>
+    <a href="#contact" @click="mobileMenu = false" class="block text-ic-sage font-medium">Get in Touch</a>
   </div>
 </nav>

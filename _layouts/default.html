@@ -11,6 +11,17 @@
     tailwind.config = {
       theme: {
         extend: {
+          colors: {
+            'ic-navy': '{{ site.data.brand.colors.primary }}',
+            'ic-sky': '{{ site.data.brand.colors.secondary }}',
+            'ic-blush': '{{ site.data.brand.colors.blush }}',
+            'ic-sage': '{{ site.data.brand.colors.sage }}',
+            'ic-terra': '{{ site.data.brand.colors.terracotta }}',
+            'ic-linen': '{{ site.data.brand.colors.background }}',
+            'ic-cloud': '{{ site.data.brand.colors.background_alt }}',
+            'ic-text': '{{ site.data.brand.colors.text }}',
+            'ic-muted': '{{ site.data.brand.colors.text_light }}',
+          },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif'],
           },
@@ -24,7 +35,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 </head>
-<body class="bg-gray-950 text-white font-sans antialiased" x-data="{ mobileMenu: false }">
+<body class="bg-ic-linen text-ic-text font-sans antialiased" x-data="{ mobileMenu: false }">
   {% include nav.html %}
   <main>
     {{ content }}

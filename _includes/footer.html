@@ -1,5 +1,27 @@
-<footer class="border-t border-white/5 py-12 mt-32">
-  <div class="max-w-7xl mx-auto px-6 text-center text-sm text-gray-500">
-    <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+<footer class="bg-ic-navy text-white/70 py-16 mt-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-3 gap-12">
+      <div>
+        <h3 class="text-white font-semibold text-lg mb-3">{{ site.title }}</h3>
+        <p class="text-sm leading-relaxed">{{ site.data.brand.tagline }}</p>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold text-lg mb-3">Location</h3>
+        <p class="text-sm leading-relaxed">{{ site.data.brand.contact.location }}</p>
+        <p class="text-sm mt-1">{{ site.data.brand.contact.region }}</p>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold text-lg mb-3">Connect</h3>
+        <p class="text-sm">{{ site.data.brand.contact.name }} — {{ site.data.brand.contact.phone }}</p>
+        <p class="text-sm mt-2">
+          <a href="https://www.instagram.com/{{ site.data.brand.contact.instagram }}" class="hover:text-white transition">Instagram</a>
+          &nbsp;&middot;&nbsp;
+          <a href="https://www.facebook.com/profile.php?id=100094922620607" class="hover:text-white transition">Facebook</a>
+        </p>
+      </div>
+    </div>
+    <div class="border-t border-white/10 mt-12 pt-8 text-center text-xs text-white/40">
+      &copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All rights reserved.
+    </div>
   </div>
 </footer>

@@ -1,113 +1,248 @@
 ---
 layout: default
-title: IC — Home
+title: Inner Circle Equestrian — A Home Away From Home for Horse & Rider
+description: "Supportive equestrian community for adult amateur horse owners. Agistment, lessons, and horse training in Berrima, Southern Highlands NSW."
 ---
 
 <!-- Hero -->
-<section class="relative min-h-screen flex items-center justify-center bg-grid overflow-hidden">
-  <div class="hero-glow"></div>
-  <div class="relative max-w-4xl mx-auto px-6 text-center pt-24">
-    <div class="animate-fade-up">
-      <span class="inline-block px-4 py-1.5 rounded-full text-xs font-medium bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-8">
-        Now available
-      </span>
-    </div>
-    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight animate-fade-up">
-      Build something
-      <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-        remarkable
-      </span>
-    </h1>
-    <p class="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto animate-fade-up-delay">
-      A short, punchy description of what you do and why it matters. Keep it to one or two sentences max.
-    </p>
-    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up-delay-2">
-      <a href="#contact" class="px-8 py-3.5 rounded-full bg-indigo-500 hover:bg-indigo-400 text-white font-semibold transition shadow-lg shadow-indigo-500/25">
-        Get Started
-      </a>
-      <a href="#features" class="px-8 py-3.5 rounded-full border border-white/10 hover:border-white/20 text-gray-300 hover:text-white font-medium transition">
-        Learn More
-      </a>
+<section class="relative min-h-screen flex items-end md:items-center overflow-hidden bg-ic-navy">
+  <img src="{{ '/assets/images/hero.jpg' | relative_url }}" alt="Natalie Innes with horses at Inner Circle Equestrian" class="absolute inset-0 w-full h-full object-cover object-top">
+  <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-ic-navy/90 via-ic-navy/70 to-ic-navy/30"></div>
+
+  <div class="relative max-w-6xl mx-auto px-6 pb-16 pt-32 md:py-24">
+    <div class="max-w-xl">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+        {{ site.data.brand.tagline }}
+      </h1>
+      <p class="mt-6 text-lg text-white/85 leading-relaxed">
+        A supportive equestrian community for adult amateur horse owners in the beautiful Southern Highlands.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="inline-block px-8 py-3.5 rounded-full bg-ic-sage hover:bg-ic-sage/90 text-white font-semibold text-center transition shadow-lg">
+          Get in Touch
+        </a>
+        <a href="#about" class="inline-block px-8 py-3.5 rounded-full border border-white/30 hover:border-white/60 text-white font-medium text-center transition">
+          Learn More
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Features -->
-<section id="features" class="py-32">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-20">
-      <h2 class="text-3xl md:text-5xl font-bold tracking-tight">
-        Everything you need
-      </h2>
-      <p class="mt-4 text-gray-400 max-w-xl mx-auto">
-        A quick overview of what makes this special.
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      {% for i in (1..3) %}
-      <div class="group p-8 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-indigo-500/30 transition-all duration-300">
-        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 transition">
-          <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-          </svg>
-        </div>
-        <h3 class="text-lg font-semibold mb-2">Feature {{ i }}</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">
-          A brief description of this feature and the value it provides. Keep it concise and benefit-focused.
-        </p>
+<!-- Values -->
+<section class="py-14 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-3 gap-12 text-center">
+      {% for value in site.data.brand.values %}
+      <div>
+        <h3 class="text-ic-navy font-bold text-xl mb-3">{{ value.word }}</h3>
+        <p class="text-ic-muted leading-relaxed">{{ value.description }}</p>
       </div>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<!-- About -->
-<section id="about" class="py-32 border-t border-white/5">
-  <div class="max-w-7xl mx-auto px-6">
+<!-- About Nat -->
+<section id="about" class="py-24 bg-ic-linen">
+  <div class="max-w-6xl mx-auto px-6">
     <div class="grid md:grid-cols-2 gap-16 items-center">
-      <div>
-        <h2 class="text-3xl md:text-5xl font-bold tracking-tight">
-          Why choose us
-        </h2>
-        <p class="mt-6 text-gray-400 leading-relaxed">
-          Tell your story here. What problem do you solve? Why should people care? Keep it honest and human.
-        </p>
-        <p class="mt-4 text-gray-400 leading-relaxed">
-          Another paragraph if you need it. Sometimes less is more.
-        </p>
+      <!-- Photo placeholder -->
+      <div class="aspect-[4/5] rounded-2xl border-2 border-dashed border-ic-sky/30 bg-ic-cloud flex items-center justify-center">
+        <span class="text-ic-muted text-sm">Photo of Nat — 4:5 portrait<br>approx 600x750px</span>
       </div>
-      <div class="relative">
-        <div class="aspect-square rounded-2xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-white/5 flex items-center justify-center">
-          <span class="text-gray-500 text-sm">Image / graphic here</span>
-        </div>
+      <div>
+        <p class="text-ic-sky font-medium text-sm tracking-wide uppercase mb-3">Meet Natalie</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-ic-navy leading-tight">
+          Fun, inclusive, and endlessly patient
+        </h2>
+        <p class="mt-6 text-ic-text leading-relaxed">
+          Natalie Innes has spent 37 years with horses at every level from grassroots to international. A British Horse Society Accredited Coach and Equestrian Australia qualified instructor, she's built her career around one belief: every rider deserves to feel supported.
+        </p>
+        <p class="mt-4 text-ic-text leading-relaxed">
+          After running a successful equestrian business in the UK, Nat brought her experience to the Southern Highlands — creating a space where adult amateurs can learn, grow, and enjoy their horses without pressure or judgement.
+        </p>
+        <p class="mt-4 text-ic-muted leading-relaxed italic">
+          "I've been where many of my riders are — nervous, unsure, wanting to do right by my horse. That's exactly why I do this."
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Contact / CTA -->
-<section id="contact" class="py-32">
+<!-- Services -->
+<section id="services" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-ic-sky font-medium text-sm tracking-wide uppercase mb-3">What We Offer</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-ic-navy">
+        Everything under one roof
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Agistment -->
+      <div class="p-8 rounded-2xl bg-ic-linen border border-ic-cloud">
+        <h3 class="text-ic-navy font-semibold text-lg mb-3">Agistment</h3>
+        <p class="text-ic-text leading-relaxed">
+          Calm, community-focused agistment with individual private paddocks, horse-safe fencing, twice daily feeding, checking and rugging. Your horse is in safe hands — so you can relax.
+        </p>
+      </div>
+
+      <!-- Lessons -->
+      <div class="p-8 rounded-2xl bg-ic-linen border border-ic-cloud">
+        <h3 class="text-ic-navy font-semibold text-lg mb-3">Lessons</h3>
+        <p class="text-ic-text leading-relaxed">
+          Bespoke training and lessons tailored to you — whether you're rebuilding confidence, working on groundwork, or preparing to get back in the saddle. No rush, no assumptions.
+        </p>
+      </div>
+
+      <!-- Horse Training -->
+      <div class="p-8 rounded-2xl bg-ic-linen border border-ic-cloud">
+        <h3 class="text-ic-navy font-semibold text-lg mb-3">Horse Training & Schooling</h3>
+        <p class="text-ic-text leading-relaxed">
+          Professional schooling aligned with your goals and your horse's temperament. We respect the bond between you and your horse — training is always done with care and in consultation with you.
+        </p>
+      </div>
+
+      <!-- Event Support -->
+      <div class="p-8 rounded-2xl bg-ic-linen border border-ic-cloud">
+        <h3 class="text-ic-navy font-semibold text-lg mb-3">Event Support</h3>
+        <p class="text-ic-text leading-relaxed">
+          When you're ready, we'll help you load up, travel to events, and support you on the day — so you never have to do it alone. From your first outing to your personal best, we're right there with you.
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <p class="text-ic-muted">
+        Plus: clinics with external professionals, trail rides, beach rides, and social events.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="py-24 bg-ic-cloud">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-ic-sky font-medium text-sm tracking-wide uppercase mb-3">From Our Community</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-ic-navy">
+        What our riders say
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 items-stretch">
+      <!-- Testimonial 1 -->
+      <div class="bg-white p-8 rounded-2xl flex flex-col">
+        <div class="w-16 h-16 rounded-full border-2 border-dashed border-ic-sky/30 bg-ic-linen flex items-center justify-center mb-6">
+          <span class="text-ic-muted text-xs">Photo</span>
+        </div>
+        <p class="text-ic-text leading-relaxed italic">
+          "Paddy and I had a BIG breakthrough in our lesson with Nat today. I went from grinning ear to ear... to full happy tears. So proud of my boy and so grateful for the team around us."
+        </p>
+        <p class="mt-auto pt-4 text-ic-navy font-semibold text-sm">Monika</p>
+        <p class="text-ic-muted text-sm">IC Rider</p>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-white p-8 rounded-2xl flex flex-col">
+        <div class="w-16 h-16 rounded-full border-2 border-dashed border-ic-sky/30 bg-ic-linen flex items-center justify-center mb-6">
+          <span class="text-ic-muted text-xs">Photo</span>
+        </div>
+        <p class="text-ic-text leading-relaxed italic">
+          "These two are something really special! Both are beautiful inside and out."
+        </p>
+        <p class="mt-auto pt-4 text-ic-navy font-semibold text-sm">Hailey</p>
+        <p class="text-ic-muted text-sm">About Beck &amp; Herbie</p>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-white p-8 rounded-2xl flex flex-col">
+        <div class="w-16 h-16 rounded-full border-2 border-dashed border-ic-sky/30 bg-ic-linen flex items-center justify-center mb-6">
+          <span class="text-ic-muted text-xs">Photo</span>
+        </div>
+        <p class="text-ic-text leading-relaxed italic">
+          "Have a happy day beautiful Nat, and to all the ponies, you're the best!"
+        </p>
+        <p class="mt-auto pt-4 text-ic-navy font-semibold text-sm">Kim</p>
+        <p class="text-ic-muted text-sm">IC Community Member</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Facilities -->
+<section id="facilities" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="text-ic-sky font-medium text-sm tracking-wide uppercase mb-3">The Property</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-ic-navy leading-tight">
+          Calgary Park, Berrima
+        </h2>
+        <p class="mt-6 text-ic-text leading-relaxed">
+          Set in the heart of the Southern Highlands, Calgary Park offers a peaceful, purpose-built equestrian property surrounded by beautiful Australian bushland — perfect for exploring and enjoying.
+        </p>
+        <ul class="mt-8 space-y-3 text-ic-text">
+          <li class="flex items-start gap-3">
+            <span class="text-ic-sage mt-1">&#10003;</span>
+            Fully lit indoor arena — 65m x 35m, Soiltex surface
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-ic-sage mt-1">&#10003;</span>
+            Outdoor show jumping area
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-ic-sage mt-1">&#10003;</span>
+            Private trail riding through native bushland
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-ic-sage mt-1">&#10003;</span>
+            5 undercover holding yards adjacent to arena
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-ic-sage mt-1">&#10003;</span>
+            4 wash bays (including hot water)
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-ic-sage mt-1">&#10003;</span>
+            Stables, tack room, and day yards
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-ic-sage mt-1">&#10003;</span>
+            Tea, coffee, bathroom, and shower facilities
+          </li>
+        </ul>
+      </div>
+      <!-- Property photo placeholder -->
+      <div class="aspect-[4/3] rounded-2xl border-2 border-dashed border-ic-sky/30 bg-ic-cloud flex items-center justify-center">
+        <span class="text-ic-muted text-sm">Property / arena photo<br>approx 800x600px</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / Contact -->
+<section id="contact" class="py-24 bg-ic-navy">
   <div class="max-w-3xl mx-auto px-6 text-center">
-    <h2 class="text-3xl md:text-5xl font-bold tracking-tight">
-      Ready to get started?
+    <h2 class="text-3xl md:text-4xl font-bold text-white leading-tight">
+      Join the Inner Circle
     </h2>
-    <p class="mt-4 text-gray-400 max-w-xl mx-auto">
-      Drop your email and we'll be in touch. No spam, ever.
+    <p class="mt-4 text-white/70 text-lg leading-relaxed">
+      Whether you're looking for agistment, lessons, or just a supportive place to enjoy your horse — we'd love to hear from you.
     </p>
-    <form class="mt-10 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" x-data="{ email: '' }">
-      <input
-        type="email"
-        x-model="email"
-        placeholder="you@example.com"
-        class="flex-1 px-5 py-3.5 rounded-full bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/50 transition"
-      >
-      <button
-        type="submit"
-        class="px-8 py-3.5 rounded-full bg-indigo-500 hover:bg-indigo-400 text-white font-semibold transition shadow-lg shadow-indigo-500/25"
-      >
-        Subscribe
-      </button>
-    </form>
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="tel:{{ site.data.brand.contact.phone | replace: ' ', '' }}" class="inline-block px-8 py-3.5 rounded-full bg-ic-sage hover:bg-ic-sage/90 text-white font-semibold transition shadow-lg">
+        Call {{ site.data.brand.contact.phone }}
+      </a>
+      <a href="https://www.instagram.com/{{ site.data.brand.contact.instagram }}" class="inline-block px-8 py-3.5 rounded-full border border-white/30 hover:border-white/60 text-white font-medium transition">
+        Message on Instagram
+      </a>
+    </div>
+    <p class="mt-8 text-white/50 text-sm">
+      {{ site.data.brand.contact.location }}<br>
+      {{ site.data.brand.contact.region }}
+    </p>
   </div>
 </section>

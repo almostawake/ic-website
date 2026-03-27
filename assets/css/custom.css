@@ -1,21 +1,13 @@
-/* Glow effect for hero */
-.hero-glow {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
-  top: -200px;
-  left: 50%;
-  transform: translateX(-50%);
-  pointer-events: none;
+/* Smooth scroll offset for fixed nav */
+html {
+  scroll-padding-top: 80px;
 }
 
 /* Fade-in animation */
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -24,23 +16,5 @@
 }
 
 .animate-fade-up {
-  animation: fade-up 0.8s ease-out forwards;
-}
-
-.animate-fade-up-delay {
-  animation: fade-up 0.8s ease-out 0.2s forwards;
-  opacity: 0;
-}
-
-.animate-fade-up-delay-2 {
-  animation: fade-up 0.8s ease-out 0.4s forwards;
-  opacity: 0;
-}
-
-/* Subtle grid background */
-.bg-grid {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 64px 64px;
+  animation: fade-up 0.6s ease-out forwards;
 }
