@@ -49,8 +49,6 @@ Avoid backends for as long as possible. Static is simpler, faster, and easier to
 ### Git hygiene
 - `photos/` is gitignored — working/source photos stay local
 - `assets/images/` is for committed site images only (optimised, final versions)
-- `*.txt` in root is gitignored (scratch files, copy drafts)
-- Don't commit large binary files unnecessarily
 
 ### Palette switching (future)
 When content is finalised, implement palette switching via CSS custom properties and page front matter. Routes `/a` and `/b` serve the same content with different palettes for stakeholder review. Typography switching will follow the same pattern.
