@@ -1,7 +1,7 @@
 title: Inner Circle Equestrian
 description: "Supportive equestrian community for adult amateur horse owners. Agistment, lessons, and horse training in Berrima, Southern Highlands NSW."
-url: "https://almostawake.github.io"
-baseurl: "/ic-website"
+url: "https://icequestrian.com.au"
+baseurl: ""
 
 markdown: kramdown
 permalink: pretty
