@@ -5,11 +5,15 @@ description: "Supportive equestrian community for adult amateur horse owners. Ag
 ---
 
 <!-- Hero -->
-<section class="relative min-h-screen flex items-end md:items-center overflow-hidden bg-ic-navy">
-  <img src="{{ '/assets/images/hero.jpg' | relative_url }}" alt="Natalie Innes with horses at Inner Circle Equestrian" class="absolute inset-0 w-full h-full object-cover object-top">
-  <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-ic-navy/90 via-ic-navy/70 to-ic-navy/30"></div>
+<section class="relative min-h-[85vh] md:min-h-[80vh] flex items-end md:items-center overflow-hidden bg-ic-navy">
+  <picture>
+    <source media="(min-width: 768px)" srcset="{{ '/assets/images/hero-desktop.jpg' | relative_url }}">
+    <img src="{{ '/assets/images/hero-mobile.jpg' | relative_url }}" alt="Natalie Innes with horses at Inner Circle Equestrian" class="absolute inset-0 w-full h-full object-cover object-center">
+  </picture>
+  <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/40 to-transparent pointer-events-none"></div>
+  <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-ic-navy/95 via-ic-navy/80 via-50% to-transparent"></div>
 
-  <div class="relative max-w-6xl mx-auto px-6 pb-16 pt-32 md:py-24">
+  <div class="relative max-w-6xl mx-auto px-6 pb-16 pt-24 md:py-24">
     <div class="max-w-xl">
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
         {{ site.data.brand.tagline }}
