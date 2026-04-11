@@ -41,6 +41,14 @@ When presenting options, lead with your recommendation and explain why. The user
 - Tone down competition results — focus on confidence to participate, not winning.
 - Avoid imagery that could trigger anxiety (e.g. medals/podiums can alienate the target audience).
 
+### Design language
+Read `brand/brand-pack.html` CSS and components before building any UI. The aesthetic is editorial-luxury, not SaaS. Key non-obvious rules that are easy to default away from:
+- Cormorant Garamond at weight 300–400, never bold
+- Cream (#F5F0E8) page base, not white
+- Section labels in JetBrains Mono, steel-coloured
+- Small architectural radii (4–16px), never pills
+- Faint navy borders on cards, not grey blocks
+
 ### Brand source of truth
 - `brand/brand-pack.html` — visual brand bible (colours, type, logos, copy bank, mockups). This is upstream of everything else.
 - `brand/captions.json` — social media research archive (curated FB/IG posts with notes on best testimonials and brand copy).
@@ -66,6 +74,9 @@ Use GitHub's built-in Pages builder (Deploy from branch), not a custom Actions w
 
 ### Static first
 Avoid backends for as long as possible. Static is simpler, faster, and easier to maintain with AI assistance. Form submissions, email signups etc should use third-party services (e.g. Formspree, Mailchimp) not custom backends.
+
+### Use Chrome DevTools Protocol for browser automation
+Prefer `mcp__chrome-devtools__*` tools over `mcp__claude-in-chrome__*` extension tools — CDP is more reliable. Use the extension only if DevTools can't do what's needed.
 
 ### Git hygiene
 - `photos/` is gitignored — working/source photos stay local

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Inner Circle Equestrian — A Home Away From Home for Horse & Rider
-description: "Supportive equestrian community for adult amateur horse owners. Agistment, lessons, and horse training in Berrima, Southern Highlands NSW."
+description: "Supportive equestrian community for amateur horse owners. Agistment, lessons, and horse training in Berrima, Southern Highlands NSW."
 ---
 
 <!-- Hero -->
@@ -15,11 +15,11 @@ description: "Supportive equestrian community for adult amateur horse owners. Ag
 
   <div class="relative max-w-6xl mx-auto px-6 pb-16 pt-24 md:py-24">
     <div class="max-w-xl">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
         {{ site.data.site.tagline }}
       </h1>
       <p class="mt-6 text-lg text-white/85 leading-relaxed">
-        A supportive equestrian community for adult amateur horse owners in the beautiful Southern Highlands.
+        A supportive equestrian community for amateur horse owners in the beautiful Southern Highlands.
       </p>
       <div class="mt-8 flex flex-col sm:flex-row gap-4">
         <a href="#contact" class="inline-block px-8 py-3.5 rounded-full bg-ic-gold hover:bg-ic-gold/90 text-white font-semibold text-center transition shadow-lg">
@@ -33,8 +33,26 @@ description: "Supportive equestrian community for adult amateur horse owners. Ag
   </div>
 </section>
 
+<!-- Problem / Empathy -->
+<section class="py-20 bg-white">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-ic-navy leading-tight">
+      The equestrian world wasn't built for you.
+    </h2>
+    <p class="mt-6 text-lg text-ic-text leading-relaxed">
+      The industry caters to children and elite competitors. If you're an amateur horse owner — someone who rides for the love of it, fits horses around work and life, and just wants to do right by their horse — you're often left to figure it out alone.
+    </p>
+    <p class="mt-4 text-lg text-ic-text leading-relaxed">
+      Feeling stuck, nervous, or doing it alone? You don't have to be.
+    </p>
+    <p class="mt-4 text-lg text-ic-muted leading-relaxed">
+      Inner Circle Equestrian exists for riders like you — a place where you and your horse get the support you both deserve, without pressure, without judgement, and without assumptions about where you "should" be.
+    </p>
+  </div>
+</section>
+
 <!-- Values -->
-<section class="py-14 bg-white">
+<section class="py-14 bg-ic-cloud">
   <div class="max-w-6xl mx-auto px-6">
     <div class="grid md:grid-cols-3 gap-12 text-center">
       {% for value in site.data.site.values %}
@@ -47,24 +65,70 @@ description: "Supportive equestrian community for adult amateur horse owners. Ag
   </div>
 </section>
 
+<!-- Services -->
+<section id="services" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-ic-gold font-medium text-sm tracking-widest uppercase mb-3">What We Offer</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-ic-navy">
+        Everything under one roof
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="p-8 rounded-2xl bg-ic-cloud border border-ic-cloud">
+        <h3 class="text-ic-navy font-semibold text-lg mb-3">Agistment</h3>
+        <p class="text-ic-text leading-relaxed">
+          Calm, community-focused agistment with individual private paddocks, horse-safe fencing, twice daily feeding, checking and rugging. Your horse is in safe hands — so you can relax.
+        </p>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-ic-cloud border border-ic-cloud">
+        <h3 class="text-ic-navy font-semibold text-lg mb-3">Lessons</h3>
+        <p class="text-ic-text leading-relaxed">
+          Bespoke training and lessons tailored to you — whether you're rebuilding confidence, working on groundwork, or preparing to get back in the saddle. No rush, no assumptions.
+        </p>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-ic-cloud border border-ic-cloud">
+        <h3 class="text-ic-navy font-semibold text-lg mb-3">Horse Training & Schooling</h3>
+        <p class="text-ic-text leading-relaxed">
+          Professional schooling aligned with your goals and your horse's temperament. Training is always done with care and in consultation with you — we respect the bond between you and your horse.
+        </p>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-ic-cloud border border-ic-cloud">
+        <h3 class="text-ic-navy font-semibold text-lg mb-3">Event Support</h3>
+        <p class="text-ic-text leading-relaxed">
+          When you're ready, we'll help you load up, travel to events, and support you on the day — so you never have to do it alone. From your first outing to your personal best, we're right there with you.
+        </p>
+      </div>
+    </div>
+
+    <p class="text-center text-ic-muted mt-10">
+      Plus: clinics with external professionals, trail rides, beach rides, and social events.
+    </p>
+  </div>
+</section>
+
 <!-- About Nat -->
-<section id="about" class="py-24 bg-ic-linen">
+<section id="about" class="py-24 bg-ic-cloud">
   <div class="max-w-6xl mx-auto px-6">
     <div class="grid md:grid-cols-2 gap-16 items-center">
       <!-- Photo placeholder -->
-      <div class="aspect-[4/5] rounded-2xl border-2 border-dashed border-ic-sky/30 bg-ic-cloud flex items-center justify-center">
-        <span class="text-ic-muted text-sm">Photo of Nat — 4:5 portrait<br>approx 600x750px</span>
+      <div class="aspect-[4/5] rounded-2xl border-2 border-dashed border-ic-sky/30 bg-white flex items-center justify-center">
+        <span class="text-ic-muted text-sm">Photo of Nat — 4:5 portrait<br>approx 600×750px</span>
       </div>
       <div>
-        <p class="text-ic-sky font-medium text-sm tracking-wide uppercase mb-3">Meet Natalie</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-ic-navy leading-tight">
+        <p class="text-ic-gold font-medium text-sm tracking-widest uppercase mb-3">Meet Natalie</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-ic-navy leading-tight">
           Fun, inclusive, and endlessly patient
         </h2>
         <p class="mt-6 text-ic-text leading-relaxed">
-          Natalie Innes has spent 37 years with horses at every level from grassroots to international. A British Horse Society Accredited Coach and Equestrian Australia qualified instructor, she's built her career around one belief: every rider deserves to feel supported.
+          Natalie Innes has spent 37 years with horses at every level — from grassroots to international. A British Horse Society Accredited Coach and Equestrian Australia qualified instructor, she's built her career around one belief: every rider deserves to feel supported.
         </p>
         <p class="mt-4 text-ic-text leading-relaxed">
-          After running a successful equestrian business in the UK, Nat brought her experience to the Southern Highlands — creating a space where adult amateurs can learn, grow, and enjoy their horses without pressure or judgement.
+          After running a successful equestrian business in the UK, Nat brought her experience to the Southern Highlands — creating a space where amateur horse owners can learn, grow, and enjoy their horses without pressure or judgement.
         </p>
         <p class="mt-4 text-ic-muted leading-relaxed italic">
           "I've been where many of my riders are — nervous, unsure, wanting to do right by my horse. That's exactly why I do this."
@@ -74,124 +138,72 @@ description: "Supportive equestrian community for adult amateur horse owners. Ag
   </div>
 </section>
 
-<!-- Services -->
-<section id="services" class="py-24 bg-white">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-16">
-      <p class="text-ic-sky font-medium text-sm tracking-wide uppercase mb-3">What We Offer</p>
-      <h2 class="text-3xl md:text-4xl font-bold text-ic-navy">
-        Everything under one roof
-      </h2>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-8">
-      <!-- Agistment -->
-      <div class="p-8 rounded-2xl bg-ic-linen border border-ic-cloud">
-        <h3 class="text-ic-navy font-semibold text-lg mb-3">Agistment</h3>
-        <p class="text-ic-text leading-relaxed">
-          Calm, community-focused agistment with individual private paddocks, horse-safe fencing, twice daily feeding, checking and rugging. Your horse is in safe hands — so you can relax.
-        </p>
-      </div>
-
-      <!-- Lessons -->
-      <div class="p-8 rounded-2xl bg-ic-linen border border-ic-cloud">
-        <h3 class="text-ic-navy font-semibold text-lg mb-3">Lessons</h3>
-        <p class="text-ic-text leading-relaxed">
-          Bespoke training and lessons tailored to you — whether you're rebuilding confidence, working on groundwork, or preparing to get back in the saddle. No rush, no assumptions.
-        </p>
-      </div>
-
-      <!-- Horse Training -->
-      <div class="p-8 rounded-2xl bg-ic-linen border border-ic-cloud">
-        <h3 class="text-ic-navy font-semibold text-lg mb-3">Horse Training & Schooling</h3>
-        <p class="text-ic-text leading-relaxed">
-          Professional schooling aligned with your goals and your horse's temperament. We respect the bond between you and your horse — training is always done with care and in consultation with you.
-        </p>
-      </div>
-
-      <!-- Event Support -->
-      <div class="p-8 rounded-2xl bg-ic-linen border border-ic-cloud">
-        <h3 class="text-ic-navy font-semibold text-lg mb-3">Event Support</h3>
-        <p class="text-ic-text leading-relaxed">
-          When you're ready, we'll help you load up, travel to events, and support you on the day — so you never have to do it alone. From your first outing to your personal best, we're right there with you.
-        </p>
-      </div>
-    </div>
-
-    <div class="text-center mt-12">
-      <p class="text-ic-muted">
-        Plus: clinics with external professionals, trail rides, beach rides, and social events.
-      </p>
-    </div>
-  </div>
-</section>
-
 <!-- Testimonials -->
-<section id="testimonials" class="py-24 bg-ic-cloud">
+<section id="testimonials" class="py-24 bg-white">
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center mb-16">
-      <p class="text-ic-sky font-medium text-sm tracking-wide uppercase mb-3">From Our Community</p>
-      <h2 class="text-3xl md:text-4xl font-bold text-ic-navy">
+      <p class="text-ic-gold font-medium text-sm tracking-widest uppercase mb-3">From Our Community</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-ic-navy">
         What our riders say
       </h2>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8 items-stretch">
-      <!-- Testimonial 1 -->
-      <div class="bg-white p-8 rounded-2xl flex flex-col">
-        <div class="w-16 h-16 rounded-full border-2 border-dashed border-ic-sky/30 bg-ic-linen flex items-center justify-center mb-6">
+      <!-- Testimonial 1 — Monika -->
+      <div class="bg-ic-cloud p-8 rounded-2xl flex flex-col">
+        <div class="w-16 h-16 rounded-full border-2 border-dashed border-ic-sky/30 bg-white flex items-center justify-center mb-6">
           <span class="text-ic-muted text-xs">Photo</span>
         </div>
-        <p class="text-ic-text leading-relaxed italic">
-          "Paddy and I had a BIG breakthrough in our lesson with Nat today. I went from grinning ear to ear... to full happy tears. So proud of my boy and so grateful for the team around us."
+        <p class="text-ic-text leading-relaxed italic flex-1">
+          "Paddy and I had a BIG breakthrough in our lesson with Nat today. With Nat's incredible guidance, everything just clicked. I went from grinning ear to ear... to full happy tears. So proud of my boy and so grateful for the team around us."
         </p>
-        <p class="mt-auto pt-4 text-ic-navy font-semibold text-sm">Monika</p>
+        <p class="mt-6 pt-4 border-t border-ic-cloud text-ic-navy font-semibold text-sm">Monika</p>
         <p class="text-ic-muted text-sm">IC Rider</p>
       </div>
 
-      <!-- Testimonial 2 -->
-      <div class="bg-white p-8 rounded-2xl flex flex-col">
-        <div class="w-16 h-16 rounded-full border-2 border-dashed border-ic-sky/30 bg-ic-linen flex items-center justify-center mb-6">
+      <!-- Testimonial 2 — Rachel -->
+      <div class="bg-ic-cloud p-8 rounded-2xl flex flex-col">
+        <div class="w-16 h-16 rounded-full border-2 border-dashed border-ic-sky/30 bg-white flex items-center justify-center mb-6">
           <span class="text-ic-muted text-xs">Photo</span>
         </div>
-        <p class="text-ic-text leading-relaxed italic">
-          "These two are something really special! Both are beautiful inside and out."
+        <p class="text-ic-text leading-relaxed italic flex-1">
+          "After focused work on our partnership, groundwork, and boundaries, we're stepping into the new year stronger than ever. Wylie is willing, engaged, and eager to please."
         </p>
-        <p class="mt-auto pt-4 text-ic-navy font-semibold text-sm">Hailey</p>
-        <p class="text-ic-muted text-sm">About Beck &amp; Herbie</p>
+        <p class="mt-6 pt-4 border-t border-ic-cloud text-ic-navy font-semibold text-sm">Rachel</p>
+        <p class="text-ic-muted text-sm">IC Rider — Rachel &amp; Wylie</p>
       </div>
 
-      <!-- Testimonial 3 -->
-      <div class="bg-white p-8 rounded-2xl flex flex-col">
-        <div class="w-16 h-16 rounded-full border-2 border-dashed border-ic-sky/30 bg-ic-linen flex items-center justify-center mb-6">
+      <!-- Testimonial 3 — Hailey -->
+      <div class="bg-ic-cloud p-8 rounded-2xl flex flex-col">
+        <div class="w-16 h-16 rounded-full border-2 border-dashed border-ic-sky/30 bg-white flex items-center justify-center mb-6">
           <span class="text-ic-muted text-xs">Photo</span>
         </div>
-        <p class="text-ic-text leading-relaxed italic">
-          "Have a happy day beautiful Nat, and to all the ponies, you're the best!"
+        <p class="text-ic-text leading-relaxed italic flex-1">
+          "These two are something really special! Both are beautiful inside and out. All their hard work, patience, and dedication is truly paying off."
         </p>
-        <p class="mt-auto pt-4 text-ic-navy font-semibold text-sm">Kim</p>
-        <p class="text-ic-muted text-sm">IC Community Member</p>
+        <p class="mt-6 pt-4 border-t border-ic-cloud text-ic-navy font-semibold text-sm">Hailey</p>
+        <p class="text-ic-muted text-sm">About Beck &amp; Herbie</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Facilities -->
-<section id="facilities" class="py-24 bg-white">
+<section id="facilities" class="py-24 bg-ic-cloud">
   <div class="max-w-6xl mx-auto px-6">
     <div class="grid md:grid-cols-2 gap-16 items-center">
       <div>
-        <p class="text-ic-sky font-medium text-sm tracking-wide uppercase mb-3">The Property</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-ic-navy leading-tight">
+        <p class="text-ic-gold font-medium text-sm tracking-widest uppercase mb-3">The Property</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-ic-navy leading-tight">
           Calgary Park, Berrima
         </h2>
         <p class="mt-6 text-ic-text leading-relaxed">
-          Set in the heart of the Southern Highlands, Calgary Park offers a peaceful, purpose-built equestrian property surrounded by beautiful Australian bushland — perfect for exploring and enjoying.
+          Set in the heart of the Southern Highlands, Calgary Park is a peaceful, purpose-built equestrian property surrounded by beautiful Australian bushland — perfect for exploring and enjoying.
         </p>
         <ul class="mt-8 space-y-3 text-ic-text">
           <li class="flex items-start gap-3">
             <span class="text-ic-gold mt-1">&#10003;</span>
-            Fully lit indoor arena — 65m x 35m, Soiltex surface
+            Fully lit indoor arena — 65m × 35m, Soiltex surface
           </li>
           <li class="flex items-start gap-3">
             <span class="text-ic-gold mt-1">&#10003;</span>
@@ -207,7 +219,7 @@ description: "Supportive equestrian community for adult amateur horse owners. Ag
           </li>
           <li class="flex items-start gap-3">
             <span class="text-ic-gold mt-1">&#10003;</span>
-            4 wash bays (including hot water)
+            4 wash bays including hot water
           </li>
           <li class="flex items-start gap-3">
             <span class="text-ic-gold mt-1">&#10003;</span>
@@ -220,8 +232,82 @@ description: "Supportive equestrian community for adult amateur horse owners. Ag
         </ul>
       </div>
       <!-- Property photo placeholder -->
-      <div class="aspect-[4/3] rounded-2xl border-2 border-dashed border-ic-sky/30 bg-ic-cloud flex items-center justify-center">
-        <span class="text-ic-muted text-sm">Property / arena photo<br>approx 800x600px</span>
+      <div class="aspect-[4/3] rounded-2xl border-2 border-dashed border-ic-sky/30 bg-white flex items-center justify-center">
+        <span class="text-ic-muted text-sm">Property / arena photo<br>approx 800×600px</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-24 bg-white">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-ic-gold font-medium text-sm tracking-widest uppercase mb-3">Common Questions</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-ic-navy">
+        Good questions — here are the answers
+      </h2>
+    </div>
+
+    <div class="space-y-6" x-data="{ open: null }">
+      <div class="border border-ic-cloud rounded-xl overflow-hidden">
+        <button @click="open = open === 1 ? null : 1" class="w-full flex items-center justify-between px-6 py-5 text-left">
+          <span class="font-semibold text-ic-navy">Do I need my own horse?</span>
+          <svg :class="open === 1 ? 'rotate-180' : ''" class="w-5 h-5 text-ic-muted transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="open === 1" x-collapse class="px-6 pb-5">
+          <p class="text-ic-text leading-relaxed">For agistment, yes — you'll need your own horse. For lessons, we can sometimes arrange for you to ride one of our horses while you're getting started. Just ask.</p>
+        </div>
+      </div>
+
+      <div class="border border-ic-cloud rounded-xl overflow-hidden">
+        <button @click="open = open === 2 ? null : 2" class="w-full flex items-center justify-between px-6 py-5 text-left">
+          <span class="font-semibold text-ic-navy">What level do I need to be?</span>
+          <svg :class="open === 2 ? 'rotate-180' : ''" class="w-5 h-5 text-ic-muted transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="open === 2" x-collapse class="px-6 pb-5">
+          <p class="text-ic-text leading-relaxed">Any level. We work with complete beginners through to riders preparing for competition. There's no minimum — just a willingness to learn and enjoy the journey.</p>
+        </div>
+      </div>
+
+      <div class="border border-ic-cloud rounded-xl overflow-hidden">
+        <button @click="open = open === 3 ? null : 3" class="w-full flex items-center justify-between px-6 py-5 text-left">
+          <span class="font-semibold text-ic-navy">I'm nervous — is that okay?</span>
+          <svg :class="open === 3 ? 'rotate-180' : ''" class="w-5 h-5 text-ic-muted transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="open === 3" x-collapse class="px-6 pb-5">
+          <p class="text-ic-text leading-relaxed">More than okay — it's one of the most common reasons people come to us. Nat specialises in working with nervous riders. We go at your pace, build your confidence gradually, and never push you past where you're comfortable.</p>
+        </div>
+      </div>
+
+      <div class="border border-ic-cloud rounded-xl overflow-hidden">
+        <button @click="open = open === 4 ? null : 4" class="w-full flex items-center justify-between px-6 py-5 text-left">
+          <span class="font-semibold text-ic-navy">Do I have to compete?</span>
+          <svg :class="open === 4 ? 'rotate-180' : ''" class="w-5 h-5 text-ic-muted transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="open === 4" x-collapse class="px-6 pb-5">
+          <p class="text-ic-text leading-relaxed">Absolutely not. Many of our riders are here purely to enjoy their horses. Competition support is available when and if you want it — there's zero pressure.</p>
+        </div>
+      </div>
+
+      <div class="border border-ic-cloud rounded-xl overflow-hidden">
+        <button @click="open = open === 5 ? null : 5" class="w-full flex items-center justify-between px-6 py-5 text-left">
+          <span class="font-semibold text-ic-navy">Where are you located?</span>
+          <svg :class="open === 5 ? 'rotate-180' : ''" class="w-5 h-5 text-ic-muted transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="open === 5" x-collapse class="px-6 pb-5">
+          <p class="text-ic-text leading-relaxed">Calgary Park, 180 Birchalls Lane, Berrima NSW 2577 — in the Southern Highlands, about 1.5 hours from Sydney. Beautiful country, great riding, and worth the drive.</p>
+        </div>
+      </div>
+
+      <div class="border border-ic-cloud rounded-xl overflow-hidden">
+        <button @click="open = open === 6 ? null : 6" class="w-full flex items-center justify-between px-6 py-5 text-left">
+          <span class="font-semibold text-ic-navy">Can I visit before committing?</span>
+          <svg :class="open === 6 ? 'rotate-180' : ''" class="w-5 h-5 text-ic-muted transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="open === 6" x-collapse class="px-6 pb-5">
+          <p class="text-ic-text leading-relaxed">Of course. Give Nat a call and come out for a look around. No pressure, no sales pitch — just a chat and a cuppa.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -230,7 +316,7 @@ description: "Supportive equestrian community for adult amateur horse owners. Ag
 <!-- CTA / Contact -->
 <section id="contact" class="py-24 bg-ic-navy">
   <div class="max-w-3xl mx-auto px-6 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold text-white leading-tight">
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-white leading-tight">
       Join the Inner Circle
     </h2>
     <p class="mt-4 text-white/70 text-lg leading-relaxed">

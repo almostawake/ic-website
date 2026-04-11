@@ -13,17 +13,25 @@
         extend: {
           colors: {
             'ic-navy': '{{ site.data.site.colors.primary }}',
-            'ic-sky': '{{ site.data.site.colors.secondary }}',
+            'ic-steel': '{{ site.data.site.colors.secondary }}',
+            'ic-sky': '#7FA3C1',
             'ic-cream': '{{ site.data.site.colors.cream }}',
             'ic-gold': '{{ site.data.site.colors.gold }}',
+            'ic-gold-light': '#D4C4A0',
             'ic-slate': '{{ site.data.site.colors.slate }}',
-            'ic-linen': '{{ site.data.site.colors.background }}',
-            'ic-cloud': '{{ site.data.site.colors.background_alt }}',
+            'ic-linen': '{{ site.data.site.colors.background_alt }}',
             'ic-text': '{{ site.data.site.colors.text }}',
-            'ic-muted': '{{ site.data.site.colors.text_light }}',
+            'ic-ash': '{{ site.data.site.colors.text_light }}',
           },
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['Montserrat', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          borderRadius: {
+            'brand-sm': '4px',
+            'brand': '8px',
+            'brand-lg': '16px',
           },
         }
       }
@@ -32,10 +40,10 @@
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 </head>
-<body class="bg-ic-linen text-ic-text font-sans antialiased" x-data="{ mobileMenu: false }">
+<body class="bg-ic-cream text-ic-text font-sans antialiased" x-data="{ mobileMenu: false }">
   {% include nav.html %}
   <main>
     {{ content }}

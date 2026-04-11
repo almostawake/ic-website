@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inner Circle Equestrian — Coming Soon</title>
+<meta name="description" content="A supportive equestrian community for amateur horse owners. Agistment, lessons, and horse training in the Southern Highlands, NSW. Coming soon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ic-navy: #1C2856;
+  --ic-steel: #4A5A8F;
+  --ic-sky: #7FA3C1;
+  --ic-gold: #B8976A;
+  --ic-cream: #F5F0E8;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-ui: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-font-smoothing: antialiased; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--ic-navy);
+  color: white;
+}
+
+/* Background image */
+.bg-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% 25%;
+}
+
+/* Overlay — navy with subtle centre vignette for text readability */
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse 80% 70% at 50% 45%, rgba(28, 40, 86, 0.55) 0%, rgba(28, 40, 86, 0.8) 100%),
+    linear-gradient(to bottom, rgba(28, 40, 86, 0.6) 0%, rgba(28, 40, 86, 0.5) 50%, rgba(28, 40, 86, 0.7) 100%);
+}
+
+/* Floating circle motifs */
+.circle-motif {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+}
+.circle-motif:nth-child(1) {
+  width: 500px; height: 500px;
+  top: -120px; right: -80px;
+  animation: drift 25s ease-in-out infinite;
+}
+.circle-motif:nth-child(2) {
+  width: 350px; height: 350px;
+  bottom: -80px; left: -60px;
+  animation: drift 30s ease-in-out infinite reverse;
+}
+.circle-motif:nth-child(3) {
+  width: 180px; height: 180px;
+  top: 20%; left: 8%;
+  border-color: rgba(255, 255, 255, 0.025);
+  animation: drift 20s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.04); }
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 2rem;
+  max-width: 600px;
+}
+
+/* Horse mark with breathing animation */
+.mark {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 2.5rem;
+  animation: breathe 4s ease-in-out infinite, fade-in 1.2s ease-out 0.3s both;
+}
+.mark svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: white;
+  margin-bottom: 0.6rem;
+  animation: fade-in 1s ease-out 0.6s both;
+}
+
+.brand-sub {
+  font-family: var(--font-ui);
+  font-size: clamp(0.55rem, 1.2vw, 0.7rem);
+  font-weight: 300;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ic-sky);
+  margin-bottom: 2.5rem;
+  animation: fade-in 1s ease-out 0.8s both;
+}
+
+.coming {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 1.2rem;
+  animation: fade-in 1s ease-out 1s both;
+}
+
+.byline {
+  font-family: var(--font-display);
+  font-size: clamp(0.85rem, 1.8vw, 1.05rem);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 3rem;
+  animation: fade-in 1s ease-out 1.2s both;
+}
+
+/* Divider line */
+.divider {
+  width: 50px;
+  height: 1px;
+  background: var(--ic-gold);
+  margin: 0 auto 2rem;
+  opacity: 0.8;
+  animation: fade-in 1s ease-out 1.4s both;
+}
+
+/* Contact info */
+.contact {
+  animation: fade-in 1s ease-out 1.6s both;
+}
+.contact a {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease;
+}
+.contact a:hover {
+  color: var(--ic-gold);
+}
+.contact .sep {
+  color: rgba(255, 255, 255, 0.25);
+  margin: 0 0.8rem;
+}
+.contact .location {
+  display: block;
+  margin-top: 0.8rem;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .bg-image img { object-position: 32% 20%; }
+  .mark { width: 70px; height: 70px; margin-bottom: 2rem; }
+  .content { padding: 1.5rem; }
+  .contact .sep { display: none; }
+  .contact a { display: block; margin-bottom: 0.5rem; }
+}
+
+/* Ensure centring on all intermediate sizes */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .bg-image img { object-position: 30% 20%; }
+}
+</style>
+</head>
+<body>
+
+<div class="bg-image">
+  <img src="assets/images/coming-soon-bg.jpg" alt="">
+</div>
+<div class="bg-overlay"></div>
+
+<div class="circle-motif"></div>
+<div class="circle-motif"></div>
+<div class="circle-motif"></div>
+
+<div class="content">
+  <div class="mark">
+    <svg viewBox="0 0 425.2 425.2" xmlns="http://www.w3.org/2000/svg"><path d="m397.52,210.23c-.31-4.99-7.51-5.01-7.85-.04-.19,4.47-.49,8.93-.96,13.37-3.66,35.17-18.04,69.1-40.91,96.08-55.33,66.14-153.26,82.43-226.57,36.35-61.1-37.38-93.2-112.29-78.27-182.13C56.61,103.43,117.39,45.96,188.66,35.61c15.74-2.56,31.74-2.61,47.64-1.59-7.71,4.91-22.5,14.33-36.87,23.48-.77.19-1.52.47-2.22.88-.77.47-1.4,1.06-1.89,1.75-17.47,11.12-33.2,21.15-33.2,21.15-3.9,2.45-4.78,7.9-1.83,11.42,2.72,3.3,7.62,3.78,10.94,1.08,0,0,14.93-12.2,28.47-23.27.61.09,1.25.1,1.87,0l.07.02c.32.08.66.21,1.01.3,5.38,2,10.94,5.53,15.89,8.52,1.94,1.24,4.64,2.93,6.56,4.19,5.55,3.36,10.17,7.98,14.42,12.86,6.7,7.75,12.46,16.6,16.67,25.95,21.88,30.83,42.63,65.46,65.18,95.77l.05.07c-2.44,5.06-4.28,10.4-5.99,15.77-1.87,5.91-3.91,11.79-6.58,17.37-.08.11-.18.26-.27.38-1.06,1.42-2.38,2.62-3.84,3.63-5.14,3.4-11.6,3.67-17.55,2.89-6.27-.77-10.95-3.32-14.58-8.24-1.79-2.28-4.01-5.57-6.68-7.56-2.15-1.56-6.93-4.85-9.12-6.35-6.4-4.29-15.43-10.83-21.86-15.27l-10.81-7.81c-1.38-1.05-3.17-1.19-4.92-.93-29.26,6.99-53.33-4.42-66.92-31.21-1.35-2.65-2.55-5.39-3.57-8.2-.34-.96-.7-1.96-.95-2.85-.42-1.43-1.89-2.32-3.38-2.02-1.58.32-2.6,1.86-2.27,3.43.24,1.19.5,2.18.79,3.25.86,3.13,1.93,6.19,3.15,9.19,7.33,18.43,22.37,34.65,42.04,40.17,9.91,2.96,20.48,3.37,30.71,2.2,12.7,8.14,27.57,17.29,40.17,25.02,2.26,1.49,3.23,3.08,5.47,5.66,1.57,1.85,3.52,3.95,5.91,5.68,6.8,4.87,15.67,6.2,23.71,4.61,5.14-1.11,9.83-3.85,13.79-7.23,2.04-1.77,4.06-3.56,5.65-5.78,4.71-8.01,11.11-14.88,16.78-22.2,1.73-2.21,3.31-4.5,4.8-6.84,2.76-3.5,3.26-8.64,1.1-12.58-.3-.6-.72-1.2-1.11-1.74l-1.14-1.54-4.53-6.18c-20.52-27.93-45.1-56.37-65.7-84.32-2.06-4.62-4.75-9.86-6.98-14.35-5.2-10.01-10.77-20.24-19.45-27.79-2.76-2.35-6.07-4.7-9.01-6.83-4.62-3.24-9.25-6.2-14.43-8.77-.46-.22-.95-.44-1.46-.68,15.69-12.82,31.9-26.06,31.9-26.06.48-.37.81-.89.88-1.53.12-1.2-.76-2.26-1.96-2.38-11.44-1.22-22.96-1.82-34.51-1.79-68.41-.08-133.69,41.78-162.92,103.29-31.64,64.13-21.39,144.58,25.24,198.9,55.96,67.47,156.45,86.3,232.98,42.96,58.47-32.19,96.16-96.64,93.52-163.31Zm-75.01,6.04c.13-.24.28-.48.47-.69,0,0-.26.38-.47.69Zm-119.92-145.98c.1-.03.19-.06.29-.09-.09.03-.19.06-.29.09Zm.48-.16c.13-.06.27-.11.4-.17-.08.03-.16.08-.23.1-.06.02-.11.04-.17.07Z" style="fill:#fef9f2;stroke-width:0"/><path d="m320.02,306.97c-56.02,49.26-139.29,60.32-195.69,5.75-54.04-52.1-50.98-139.87,5.44-189.04,5-4.67-1.31-12.14-6.8-8.01-4.29,3.49-8.37,7.22-12.23,11.2-52.86,54.46-50.27,142.93,4.95,194.8,51.45,48.56,125.94,48.66,183.39,10.4,24.68-16.2,54.2-44.67,59.74-74.6.31-2.42-3.18-2.93-3.65-.65-4.75,19.62-20.33,36.93-35.13,50.15h0Z" style="fill:#fef9f2;stroke-width:0"/><path d="m221.75,125.89c.44.62.86,1.64,1.19,2.33.13.4.49,1.5.61,1.86.09.44.31,1.5.4,1.95.28,1.94.17,3.86,1.22,5.61,2.01,3.57,6.57,4.85,10.16,2.83,3.59-2.01,4.87-6.54,2.84-10.11-1-1.85-2.15-3.83-3.44-5.5l-.64-.86-.73-.82c-5.41-6.42-14.28-9.77-22.5-7.92-2.07.51-1.79,3.35.32,3.57,4.21.83,8.43,3.37,10.57,7.06Z" style="fill:#fef9f2;stroke-width:0"/></svg>
+  </div>
+
+  <h1 class="brand-name">Inner Circle<br>Equestrian</h1>
+
+  <p class="coming">Coming Soon</p>
+  <p class="byline">Supported by Natalie Innes</p>
+
+  <div class="divider"></div>
+
+  <div class="contact">
+    <a href="tel:0456634983">0456 634 983</a>
+    <span class="sep">&middot;</span>
+    <a href="https://www.instagram.com/inner.circle.equestrian" target="_blank" rel="noopener">@inner.circle.equestrian</a>
+    <span class="location">Calgary Park, Berrima &mdash; Southern Highlands, NSW</span>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,27 +1,32 @@
 <nav
   x-data="{ scrolled: false }"
   x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 50 })"
-  :class="scrolled ? 'bg-white/95 backdrop-blur-md border-b border-ic-cloud' : 'bg-transparent border-b border-transparent'"
+  :class="scrolled ? 'bg-ic-cream/90 backdrop-blur-md border-b border-[rgba(28,40,86,0.1)]' : 'bg-transparent border-b border-transparent'"
   class="fixed top-0 w-full z-50 transition-all duration-300"
 >
-  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="{{ '/' | relative_url }}" :class="scrolled ? 'text-ic-navy' : 'text-white'" class="text-xl font-bold tracking-tight transition-colors">
-      {{ site.title }}
+  <div class="max-w-[1200px] mx-auto px-8 py-4 flex items-center justify-between">
+    <a href="{{ '/' | relative_url }}" class="group">
+      <span :class="scrolled ? 'text-ic-navy' : 'text-white'" class="font-display text-xl font-normal tracking-tight transition-colors">
+        Inner Circle
+      </span>
+      <span :class="scrolled ? 'text-ic-steel' : 'text-white/60'" class="block font-sans text-[0.55rem] font-normal tracking-[0.25em] uppercase -mt-0.5 transition-colors">
+        Equestrian
+      </span>
     </a>
 
     <!-- Desktop nav -->
     <div class="hidden md:flex items-center gap-8">
-      <a href="#about" :class="scrolled ? 'text-ic-muted hover:text-ic-navy' : 'text-white/80 hover:text-white'" class="text-sm transition">About</a>
-      <a href="#services" :class="scrolled ? 'text-ic-muted hover:text-ic-navy' : 'text-white/80 hover:text-white'" class="text-sm transition">Services</a>
-      <a href="#testimonials" :class="scrolled ? 'text-ic-muted hover:text-ic-navy' : 'text-white/80 hover:text-white'" class="text-sm transition">Testimonials</a>
-      <a href="#facilities" :class="scrolled ? 'text-ic-muted hover:text-ic-navy' : 'text-white/80 hover:text-white'" class="text-sm transition">Facilities</a>
-      <a href="#contact" class="text-sm px-5 py-2 rounded-full bg-ic-sage hover:bg-ic-sage/90 text-white font-medium transition">
+      <a href="#about" :class="scrolled ? 'text-ic-ash hover:text-ic-navy' : 'text-white/70 hover:text-white'" class="font-sans text-xs font-medium tracking-[0.04em] uppercase transition">About</a>
+      <a href="#services" :class="scrolled ? 'text-ic-ash hover:text-ic-navy' : 'text-white/70 hover:text-white'" class="font-sans text-xs font-medium tracking-[0.04em] uppercase transition">Services</a>
+      <a href="#testimonials" :class="scrolled ? 'text-ic-ash hover:text-ic-navy' : 'text-white/70 hover:text-white'" class="font-sans text-xs font-medium tracking-[0.04em] uppercase transition">Community</a>
+      <a href="#facilities" :class="scrolled ? 'text-ic-ash hover:text-ic-navy' : 'text-white/70 hover:text-white'" class="font-sans text-xs font-medium tracking-[0.04em] uppercase transition">Facilities</a>
+      <a href="#contact" :class="scrolled ? 'bg-ic-navy text-white hover:bg-ic-navy/90' : 'border border-white/30 text-white hover:border-white/60'" class="text-xs font-medium tracking-[0.04em] uppercase px-5 py-2 rounded-brand transition">
         Get in Touch
       </a>
     </div>
 
     <!-- Mobile hamburger -->
-    <button @click="mobileMenu = !mobileMenu" :class="scrolled ? 'text-ic-muted hover:text-ic-navy' : 'text-white/80 hover:text-white'" class="md:hidden">
+    <button @click="mobileMenu = !mobileMenu" :class="scrolled ? 'text-ic-ash hover:text-ic-navy' : 'text-white/80 hover:text-white'" class="md:hidden">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path x-show="!mobileMenu" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         <path x-show="mobileMenu" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -30,11 +35,11 @@
   </div>
 
   <!-- Mobile menu -->
-  <div x-show="mobileMenu" x-transition class="md:hidden px-6 pb-4 space-y-3 bg-white">
-    <a href="#about" @click="mobileMenu = false" class="block text-ic-muted hover:text-ic-navy transition">About</a>
-    <a href="#services" @click="mobileMenu = false" class="block text-ic-muted hover:text-ic-navy transition">Services</a>
-    <a href="#testimonials" @click="mobileMenu = false" class="block text-ic-muted hover:text-ic-navy transition">Testimonials</a>
-    <a href="#facilities" @click="mobileMenu = false" class="block text-ic-muted hover:text-ic-navy transition">Facilities</a>
-    <a href="#contact" @click="mobileMenu = false" class="block text-ic-sage font-medium">Get in Touch</a>
+  <div x-show="mobileMenu" x-transition class="md:hidden px-8 pb-6 space-y-4 bg-ic-cream border-b border-[rgba(28,40,86,0.1)]">
+    <a href="#about" @click="mobileMenu = false" class="block text-ic-ash hover:text-ic-navy text-sm font-medium tracking-wide transition">About</a>
+    <a href="#services" @click="mobileMenu = false" class="block text-ic-ash hover:text-ic-navy text-sm font-medium tracking-wide transition">Services</a>
+    <a href="#testimonials" @click="mobileMenu = false" class="block text-ic-ash hover:text-ic-navy text-sm font-medium tracking-wide transition">Community</a>
+    <a href="#facilities" @click="mobileMenu = false" class="block text-ic-ash hover:text-ic-navy text-sm font-medium tracking-wide transition">Facilities</a>
+    <a href="#contact" @click="mobileMenu = false" class="block text-ic-navy font-semibold text-sm tracking-wide">Get in Touch</a>
   </div>
 </nav>
