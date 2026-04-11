@@ -22,11 +22,30 @@ When generating content (descriptions, palette options, brand copy), provide it 
 ### Lead with a recommendation
 When presenting options, lead with your recommendation and explain why. The user values opinionated guidance over neutral menus. "Go with your gut" is the default mode.
 
-### Brand voice guardrails
-- Tone down competition results — focus on confidence to participate, not winning
-- Avoid imagery that could trigger anxiety (e.g. medals/podiums can alienate the target audience)
-- The brand is warm, supportive, non-judgemental — all content should reflect this
-- "Supported by Natalie Innes" not "run by" or "owned by"
+## Brand
+
+### Identity
+- **Palette B — Classic & Clean**: Navy-dominant (#1C2856) with Soft Gold (#B8976A) accent. No greens, no blush, no terracotta. Cool neutrals (white, cool grey #F1F3F5).
+- **Typography**: Cormorant Garamond (display/editorial — matches the logo's serif), Montserrat (UI/body — matches the logo's tracked "EQUESTRIAN"), JetBrains Mono (technical/labels).
+- **Logo usage**: Horse mark SVG + CSS typography in web contexts. Full lockup PNGs/SVGs in `brand/logo/` for print/merch/social only. Never use the full lockup as an image in hero sections — it doesn't scale well.
+- **Target audience**: Amateur horse owners. Not "adult" — just "amateur."
+
+### Positioning
+- The equestrian industry caters to children and elite competitors. Amateur horse owners are assumed to be elite — or invisible. IC exists for them.
+- Everything under one roof: agistment, lessons, horse schooling, competition support.
+- No pressure, no assumptions, no judgement — support at your pace.
+- "Supported by Natalie Innes" — never "run by" or "owned by."
+
+### Voice
+- Warm, supportive, non-judgemental — all content should reflect this.
+- Tone down competition results — focus on confidence to participate, not winning.
+- Avoid imagery that could trigger anxiety (e.g. medals/podiums can alienate the target audience).
+
+### Brand source of truth
+- `brand/brand-pack.html` — visual brand bible (colours, type, logos, copy bank, mockups). This is upstream of everything else.
+- `brand/captions.json` — social media research archive (curated FB/IG posts with notes on best testimonials and brand copy).
+- `brand/logo/` — master logo assets (8 variants in PNG + SVG: full lockup, icon+wordmark, icon-only, text-only, each in navy + reverse white).
+- When making a brand decision, update `brand/` first, then propagate to `_data/site.yml` and templates.
 
 ## Technology
 
@@ -36,16 +55,11 @@ Tailwind has utilities for almost everything. Before writing custom CSS or manip
 ### One clean image + CSS overlay for heroes
 Use a single clean source image and let CSS handle the overlay gradient for text readability. Don't bake gradients or text into images — that makes them inflexible and creates the exact burned-in-text problem we hit. The CSS overlay is the correct approach.
 
-### Brand vs website separation
-- `brand/` contains the canonical brand definition — the brand-pack.html exploration kit and captions.json research archive. This is implementation-agnostic and upstream of everything else.
-- `_data/site.yml` contains only what Jekyll templates consume — colors, contact details, tagline, values. This is the downstream implementation of brand decisions.
-- When making a brand decision, update `brand/` first, then propagate to `_data/site.yml`.
-
 ### Site data lives in `_data/site.yml`
 Contact info, colours, tagline, and values are defined in `_data/site.yml` and referenced in templates via `site.data.site.*`. Don't hardcode these values in templates.
 
 ### Tailwind custom colors via config
-Brand colors are registered in the Tailwind config as custom colors (e.g. `ic-navy`, `ic-gold`) and used as utility classes throughout. Don't use hex codes directly in templates — always use the named color classes. Current palette is B (Classic & Clean — navy-dominant with gold accent).
+Brand colors are registered in the Tailwind config as custom colors (e.g. `ic-navy`, `ic-gold`) and used as utility classes throughout. Don't use hex codes directly in templates — always use the named color classes.
 
 ### Keep deployment simple
 Use GitHub's built-in Pages builder (Deploy from branch), not a custom Actions workflow. No Node.js build step — Tailwind via CDN, Jekyll handles the rest. Avoid adding complexity unless there's a clear need.
