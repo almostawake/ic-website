@@ -1,5 +1,7 @@
 # Inner Circle Equestrian — Project Guidelines
 
+**If the user says something looks wrong, it is wrong. Don't second-guess. Don't explain why your screenshot disagrees. Fix it.**
+
 ## Ways of Working
 
 ### Always visually verify before completing a task
