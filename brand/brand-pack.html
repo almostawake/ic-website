@@ -1362,6 +1362,94 @@ a { color: var(--ic-steel); text-decoration: none; }
   .mock-content { grid-template-columns: 1fr; }
   .mock-hero-content h1 { font-size: 1.8rem; }
 }
+/* ===== PRINT / PDF ===== */
+@media print {
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { background: white; font-size: 14px; }
+  .nav, .hero-scroll { display: none !important; }
+  .reveal, .reveal-left, .reveal-right, .reveal-scale { opacity: 1 !important; transform: none !important; }
+  .hero-mark, .hero-est, .hero-name, .hero-sub, .hero-tagline, .hero-positioning { opacity: 1 !important; transform: none !important; animation: none !important; }
+
+  /* Page breaks between major sections */
+  .hero { break-after: page; min-height: 100vh; }
+  .concept-section { break-after: page; }
+  .logo-section { break-after: page; }
+  .color-section { break-after: page; }
+  .type-section { break-after: page; }
+  .copy-section { break-after: page; }
+  .mockup-section { break-after: page; }
+
+  /* Tighter spacing for print */
+  .section { padding: 2rem 2.5rem; max-width: 100%; }
+  .section-title { font-size: 2rem; margin-bottom: 0.5rem; }
+  .section-subtitle { font-size: 0.95rem; margin-bottom: 0; }
+  .section-label { margin-bottom: 0.25rem; }
+  .divider { margin: 1.5rem 0; }
+
+  /* Concept section — fit on one page */
+  .concept-cards { margin-top: 1.5rem; gap: 1rem; }
+  .concept-card { padding: 1.25rem; }
+  .concept-card h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+  .concept-card p { font-size: 0.75rem; line-height: 1.5; }
+  .concept-icon { width: 40px; height: 40px; margin-bottom: 0.75rem; }
+  .card-tag { margin-top: 0.75rem; }
+
+  /* Logo grid — fit on one page */
+  .logo-grid { margin-top: 1.5rem; gap: 0.75rem; }
+  .logo-cell { aspect-ratio: 16 / 9; padding: 1rem; }
+  .logo-v7 { display: none; }
+
+  /* Color system — fit all 3 groups on one page */
+  .color-groups { margin-top: 1.5rem; gap: 1.5rem; }
+  .color-group-title { font-size: 1.1rem; margin-bottom: 0.5rem; }
+  .color-row { gap: 0.5rem; }
+  .color-swatch { height: 50px; }
+  .color-chip.primary .color-swatch { height: 70px; }
+  .color-info { padding: 0.5rem; }
+  .color-name { font-size: 0.7rem; }
+  .color-hex { font-size: 0.6rem; }
+  .color-usage { font-size: 0.55rem; margin-top: 2px; }
+
+  /* Typography — let it flow, avoid orphans */
+  .type-specimens { margin-top: 1rem; gap: 1rem; }
+  .type-specimen { gap: 1rem; padding-bottom: 1rem; break-inside: avoid; }
+  .type-meta { position: static; }
+  .type-samples { gap: 0.4rem; }
+  .type-sample { padding: 0.6rem; }
+  .type-scale { margin-top: 1rem; padding: 1.2rem; break-inside: avoid; }
+  .scale-row { padding: 0.25rem 0; }
+  .scale-text { font-size: 0.85em; }
+
+  /* Copy bank — keep together on one page */
+  .copy-section .section { padding: 1.5rem 2.5rem; }
+  .copy-columns { margin-top: 1rem; gap: 1.5rem; }
+  .copy-column-title { font-size: 1rem; margin-bottom: 0.5rem; }
+  .tagline-card { padding: 0.4rem 0.6rem; margin-bottom: 0.35rem; }
+  .tagline-text { font-size: 0.85rem; }
+  .tagline-type { font-size: 7px; }
+  .ui-snippet { padding: 0.4rem 0.6rem; margin-bottom: 0.3rem; }
+  .ui-snippet-text { font-size: 0.7rem; line-height: 1.4; }
+  .ui-snippet-context { font-size: 7px; }
+
+  /* Mockups — desktop + phones on one page */
+  .mockup-section { padding: 2rem 0; }
+  .mockup-inner { padding: 0 2.5rem; }
+  .mockup-desktop { margin-bottom: 2rem; }
+  .mock-hero { min-height: 200px; padding: 2rem 1.5rem; }
+  .mock-hero-content h1 { font-size: 1.6rem; }
+  .mock-content { padding: 1.5rem; gap: 1rem; }
+  .phone-row { gap: 1.5rem; }
+  .phone-mockup { width: 200px; border-radius: 24px; padding: 8px; }
+  .phone-screen { min-height: 360px; border-radius: 18px; }
+  .phone-notch { width: 80px; height: 20px; border-radius: 0 0 12px 12px; }
+
+  /* Prevent breaks inside components */
+  .concept-card, .logo-cell, .color-chip, .type-sample, .tagline-card, .ui-snippet,
+  .phone-mockup, .mockup-desktop { break-inside: avoid; }
+
+  /* Footer */
+  .brand-footer { padding: 2rem; }
+}
 </style>
 </head>
 <body>
