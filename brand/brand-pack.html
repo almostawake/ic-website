@@ -306,14 +306,18 @@ a { color: var(--ic-steel); text-decoration: none; }
   max-width: 800px;
 }
 
-/* Logo image */
-.hero-logo {
-  width: 300px;
-  height: auto;
+/* Horse mark */
+.hero-mark {
+  width: 120px;
+  height: 120px;
   margin: 0 auto var(--space-2xl);
   opacity: 0;
   transform: scale(0.8);
   animation: hero-icon-in 1s var(--ease-out) 0.3s forwards;
+}
+.hero-mark img {
+  width: 100%;
+  height: 100%;
 }
 
 @keyframes hero-icon-in {
@@ -1386,9 +1390,15 @@ a { color: var(--ic-steel); text-decoration: none; }
   <div class="hero-circle"></div>
 
   <div class="hero-content">
-    <img src="logo/ice-logo-full-reverse.png" alt="Inner Circle Equestrian — Supported by Natalie Innes, Est. 2023" class="hero-logo">
+    <div class="hero-mark">
+      <img src="logo/ice-logo-icon-reverse.svg" alt="Inner Circle Equestrian horse mark">
+    </div>
 
-    <div class="hero-est">Southern Highlands, NSW</div>
+    <div class="hero-est">Est. 2023 &mdash; Southern Highlands, NSW</div>
+
+    <h1 class="hero-name">Inner Circle<br>Equestrian</h1>
+
+    <div class="hero-sub">Supported by Natalie Innes</div>
 
     <p class="hero-tagline">&ldquo;A Home Away From Home for Horse &amp; Rider&rdquo;</p>
 
