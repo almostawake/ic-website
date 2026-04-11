@@ -3,18 +3,18 @@
     <div class="grid md:grid-cols-3 gap-12">
       <div>
         <h3 class="text-white font-semibold text-lg mb-3">{{ site.title }}</h3>
-        <p class="text-sm leading-relaxed">{{ site.data.brand.tagline }}</p>
+        <p class="text-sm leading-relaxed">{{ site.data.site.tagline }}</p>
       </div>
       <div>
         <h3 class="text-white font-semibold text-lg mb-3">Location</h3>
-        <p class="text-sm leading-relaxed">{{ site.data.brand.contact.location }}</p>
-        <p class="text-sm mt-1">{{ site.data.brand.contact.region }}</p>
+        <p class="text-sm leading-relaxed">{{ site.data.site.contact.location }}</p>
+        <p class="text-sm mt-1">{{ site.data.site.contact.region }}</p>
       </div>
       <div>
         <h3 class="text-white font-semibold text-lg mb-3">Connect</h3>
-        <p class="text-sm">{{ site.data.brand.contact.name }} — {{ site.data.brand.contact.phone }}</p>
+        <p class="text-sm">{{ site.data.site.contact.name }} — {{ site.data.site.contact.phone }}</p>
         <p class="text-sm mt-2">
-          <a href="https://www.instagram.com/{{ site.data.brand.contact.instagram }}" class="hover:text-white transition">Instagram</a>
+          <a href="https://www.instagram.com/{{ site.data.site.contact.instagram }}" class="hover:text-white transition">Instagram</a>
           &nbsp;&middot;&nbsp;
           <a href="https://www.facebook.com/profile.php?id=100094922620607" class="hover:text-white transition">Facebook</a>
         </p>

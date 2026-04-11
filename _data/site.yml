@@ -1,0 +1,34 @@
+# Site configuration — values consumed by Jekyll templates
+# Brand decisions live in brand/brand-pack.html
+# This file is the downstream implementation of those decisions
+
+palette: b
+
+colors:
+  primary: "#1C2856"
+  secondary: "#4A5A8F"
+  cream: "#F5F0E8"
+  gold: "#B8976A"
+  slate: "#64748B"
+  background: "#FFFFFF"
+  background_alt: "#F1F3F5"
+  text: "#3A3A3A"
+  text_light: "#64748B"
+
+tagline: "A Home Away From Home for Horse & Rider"
+
+contact:
+  phone: "0456 634 983"
+  name: "Natalie Innes"
+  instagram: "inner.circle.equestrian"
+  facebook: "Inner Circle Equestrian"
+  location: "Calgary Park, 180 Birchalls Lane, Berrima NSW 2577"
+  region: "Southern Highlands — 1.5hrs from Sydney"
+
+values:
+  - word: Supportive
+    description: "Patient, empathetic guidance that meets you where you are — no assumptions, no judgement."
+  - word: Inclusive
+    description: "Riders of all levels welcome. Whether you're starting out or coming back, you belong here."
+  - word: Team Focused
+    description: "A genuine community that celebrates every milestone — big or small — together."

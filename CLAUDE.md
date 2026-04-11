@@ -34,11 +34,16 @@ Tailwind has utilities for almost everything. Before writing custom CSS or manip
 ### One clean image + CSS overlay for heroes
 Use a single clean source image and let CSS handle the overlay gradient for text readability. Don't bake gradients or text into images — that makes them inflexible and creates the exact burned-in-text problem we hit. The CSS overlay is the correct approach.
 
-### Brand data lives in `_data/brand.yml`
-All brand values — colors, tagline, values, contact info — are defined in `_data/brand.yml` and referenced in templates via `site.data.brand.*`. This is the single source of truth. Don't hardcode brand values in templates.
+### Brand vs website separation
+- `brand/` contains the canonical brand definition — the brand-pack.html exploration kit and captions.json research archive. This is implementation-agnostic and upstream of everything else.
+- `_data/site.yml` contains only what Jekyll templates consume — colors, contact details, tagline, values. This is the downstream implementation of brand decisions.
+- When making a brand decision, update `brand/` first, then propagate to `_data/site.yml`.
+
+### Site data lives in `_data/site.yml`
+Contact info, colours, tagline, and values are defined in `_data/site.yml` and referenced in templates via `site.data.site.*`. Don't hardcode these values in templates.
 
 ### Tailwind custom colors via config
-Brand colors are registered in the Tailwind config as custom colors (e.g. `ic-navy`, `ic-sage`) and used as utility classes throughout. Don't use hex codes directly in templates — always use the named color classes.
+Brand colors are registered in the Tailwind config as custom colors (e.g. `ic-navy`, `ic-gold`) and used as utility classes throughout. Don't use hex codes directly in templates — always use the named color classes. Current palette is B (Classic & Clean — navy-dominant with gold accent).
 
 ### Keep deployment simple
 Use GitHub's built-in Pages builder (Deploy from branch), not a custom Actions workflow. No Node.js build step — Tailwind via CDN, Jekyll handles the rest. Avoid adding complexity unless there's a clear need.
@@ -49,6 +54,4 @@ Avoid backends for as long as possible. Static is simpler, faster, and easier to
 ### Git hygiene
 - `photos/` is gitignored — working/source photos stay local
 - `assets/images/` is for committed site images only (optimised, final versions)
-
-### Palette switching (future)
-When content is finalised, implement palette switching via CSS custom properties and page front matter. Routes `/a` and `/b` serve the same content with different palettes for stakeholder review. Typography switching will follow the same pattern.
+- `brand/` is committed — it's the shareable brand source of truth

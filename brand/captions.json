@@ -1,0 +1,546 @@
+{
+  "posts": [
+    {
+      "id": "fb_001",
+      "platform": "facebook",
+      "file": "fb_001.jpg",
+      "date": "March 13, 2025",
+      "caption": "Natalie Innes",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "ig_001",
+      "platform": "instagram",
+      "file": "ig_001.jpg",
+      "date": "March 13",
+      "caption": "Super proud of shazrad and joe bringing home ribbons at moss vale show!",
+      "comments": [
+        "la_potential: well done to you both, looking awesome! Great to see you"
+      ],
+      "has_humans": true
+    },
+    {
+      "id": "ig_skip_001",
+      "platform": "instagram",
+      "file": null,
+      "date": "June 24, 2025",
+      "caption": "Exciting news for our IC riders and agisters! Two amazing stores are generously offering 10% riding equipment, just for our community. We are so grateful for their support.",
+      "comments": [],
+      "has_humans": false
+    },
+    {
+      "id": "fb_002",
+      "platform": "facebook",
+      "file": "fb_002.jpg",
+      "date": "February 25",
+      "caption": "",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "ig_skip_002",
+      "platform": "instagram",
+      "file": null,
+      "date": "March 7",
+      "caption": "Nat and Forest had a very successful day at @sydneyeventingsiec placing 2nd in the open EVA65. Forest is owned by @lucyrae_eq",
+      "comments": [],
+      "has_humans": true,
+      "note": "video/reel - skipped download"
+    },
+    {
+      "id": "fb_003",
+      "platform": "facebook",
+      "file": "fb_003.jpg",
+      "date": "February 25",
+      "caption": "Close-up rider with horse after competition",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "ig_002",
+      "platform": "instagram",
+      "file": "ig_002.jpg",
+      "date": "February 25",
+      "caption": "@mrs_jan_robinson and Napoleon had a very successful first outing together at @shibumiequestriancentre with two clear SJ rounds. Proud of you!!",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "ig_skip_003",
+      "platform": "instagram",
+      "file": null,
+      "date": "February 25",
+      "caption": "Anna and Rio had a wonderful outing at @shibumiequestriancentre. They placed 1st in the adults 65 SJ, and 2nd in the dressage for their first time out together! Great job team!",
+      "comments": [
+        "charlotteostor: Amazing guys!!",
+        "mrs_jan_robinson: best day ever",
+        "belleequestrianaus: Well done"
+      ],
+      "has_humans": true,
+      "note": "video/reel"
+    },
+    {
+      "id": "fb_004",
+      "platform": "facebook",
+      "file": "fb_004.jpg",
+      "date": "February 25",
+      "caption": "Two people with horse - rider smiling on horseback, helper patting horse",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "ig_skip_004",
+      "platform": "instagram",
+      "file": null,
+      "date": "February 12",
+      "caption": "Perfect weather for a molasses Lickit. Featured Pon: Cleo. Our team at IC is supported by: @southernhighlandsforge @knowlesstockfeeds @southernruraltraders @triskeleequinetherapies @belleequestrianaus @highcountryfarriers @performance.saddlefits",
+      "comments": [],
+      "has_humans": false,
+      "note": "video, horse only"
+    },
+    {
+      "id": "fb_005",
+      "platform": "facebook",
+      "file": "fb_005.jpg",
+      "date": "February 25",
+      "caption": "Rider jumping show jumps",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "ig_skip_005",
+      "platform": "instagram",
+      "file": null,
+      "date": "February 11",
+      "caption": "Words from @thetallirishsporthorse Monika: Paddy and I had a BIG breakthrough in our lesson with Nat today. After having the saddle re-fitted (huge thanks to expert fitter Violaine Morand @performance.saddlefits) and with Nat's incredible guidance, everything just clicked. I went from grinning ear to ear... to full happy tears. So proud of my boy and so grateful for the team around us. We are so proud of you Mon!",
+      "comments": [],
+      "has_humans": false,
+      "note": "video - GREAT testimonial quote"
+    },
+    {
+      "id": "ig_skip_006",
+      "platform": "instagram",
+      "file": null,
+      "date": "February 11",
+      "caption": "@mrs_jan_robinson and Napoleon rocking it this week! Hitting personal bests, having fun and making memories - what it's all about",
+      "comments": [],
+      "has_humans": true,
+      "note": "video/reel"
+    },
+    {
+      "id": "fb_006",
+      "platform": "facebook",
+      "file": "fb_006.jpg",
+      "date": "February 25",
+      "caption": "Rider on horse with trainer/helper at showgrounds",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "ig_skip_007",
+      "platform": "instagram",
+      "file": null,
+      "date": "February 6",
+      "caption": "@rache_ista and Wylie are back in the saddle for 2026. After a well-deserved break and focused work on their partnership, groundwork, and boundaries, they're stepping into the new year stronger than ever. Rachel's grounded determination and persistence are paying off - Wylie is willing, engaged, and eager to please. We're all so proud here at IC",
+      "comments": [
+        "bel_gal: Go Rachel"
+      ],
+      "has_humans": true,
+      "note": "video/reel - good testimonial"
+    },
+    {
+      "id": "ig_skip_008",
+      "platform": "instagram",
+      "file": null,
+      "date": "February 1",
+      "caption": "Nat and Forest had a great time this weekend at the SIEC summer clinic. Owned by @lucyrae_eq",
+      "comments": [
+        "grainnedavidson: Awesome Nat"
+      ],
+      "has_humans": true,
+      "note": "video/reel"
+    },
+    {
+      "id": "fb_007",
+      "platform": "facebook",
+      "file": "fb_007.jpg",
+      "date": "February 25",
+      "caption": "Three people chatting at showgrounds - riders and trainer discussing",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "ig_skip_009",
+      "platform": "instagram",
+      "file": null,
+      "date": "January 28",
+      "caption": "Rio coming along nicely in his new partnership",
+      "comments": [],
+      "has_humans": false,
+      "note": "video, distant rider"
+    },
+    {
+      "id": "fb_008",
+      "platform": "facebook",
+      "file": "fb_008.jpg",
+      "date": "February 25",
+      "caption": "Rider jumping head-on over colorful poles",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "ig_skip_010",
+      "platform": "instagram",
+      "file": null,
+      "date": "January 27",
+      "caption": "Long weekend spent well! Nat and Forest went out for their first official outing to the @haraequine showjumping training day at Camden. Two clear rounds, and a great developing partnership. Forest is owned by the lovely @lucyrae_eq",
+      "comments": [
+        "lucyrae_eq: Looking great together",
+        "belleequestrianaus: hearts"
+      ],
+      "has_humans": true,
+      "note": "video/reel"
+    },
+    {
+      "id": "fb_skip_001",
+      "platform": "facebook",
+      "file": null,
+      "date": "February 21",
+      "caption": "Facilities listing: Fully lit Indoor arena 65m x 35m Soiltex surface, 5x undercover holding yards, Outdoor showjumping area, Private trail riding trails, 4 wash bays (one with hot water), Stables with day yards, Shared tack/rug storage room, Washing machine, Tea/coffee/shared refrigerator/bathroom, Shower facilities. Peace of mind: individual private paddocks, horse safe fencing, twice daily feeding, checking and rugging.",
+      "comments": [],
+      "has_humans": false,
+      "note": "facilities info graphic - useful for website content"
+    },
+    {
+      "id": "ig_003",
+      "platform": "instagram",
+      "file": "ig_003.jpg",
+      "date": "January 23",
+      "caption": "New duo - Anna and Rio. An exciting pair - watch this space!",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "fb_skip_002",
+      "platform": "facebook",
+      "file": null,
+      "date": "February 21",
+      "caption": "SOUTHERN HIGHLANDS AGISTMENT. Feeling stuck, nervous, or doing it alone? You don't have to be. Give yourself and your horse the care you both deserve - in a supportive, safety-first environment with like-minded people. What We Offer: Calm, community-focused agistment. Bespoke training, schooling & lessons. Support for nervous or busy riders. Help staying consistent when life gets busy. A relaxed, social atmosphere. Competition support (when you're ready). Contact Nat Innes - 0456 634 983. Website: calgarypark.com.au",
+      "comments": [],
+      "has_humans": false,
+      "note": "AGISTMENT FLYER - key brand messaging"
+    },
+    {
+      "id": "ig_skip_011",
+      "platform": "instagram",
+      "file": null,
+      "date": "January 21",
+      "caption": "Dante - the perfect example of giving a horse time - he has come so far!",
+      "comments": [
+        "mrs_jan_robinson: love you dante x",
+        "natalie.mcrae.72: hearts"
+      ],
+      "has_humans": true,
+      "note": "video, dark/silhouette"
+    },
+    {
+      "id": "fb_009",
+      "platform": "facebook",
+      "file": "fb_009.jpg",
+      "date": "January 23",
+      "caption": "New duo - Anna and Rio. An exciting pair - watch this space! At Calgary Park.",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "ig_skip_012",
+      "platform": "instagram",
+      "file": null,
+      "date": "January 20",
+      "caption": "Ness coming along nicely",
+      "comments": [],
+      "has_humans": true,
+      "note": "video, dark silhouette rider"
+    },
+    {
+      "id": "fb_skip_003",
+      "platform": "facebook",
+      "file": null,
+      "date": "December 8, 2025",
+      "caption": "WORKING PUPIL WANTED - SOUTHERN HIGHLANDS. We're looking for a motivated, horse-loving Working Pupil to join our friendly, supportive team at our close-knit agistment property. Perfect for someone studying Cert III Equine Studies or similar who wants real, hands-on experience.",
+      "comments": [],
+      "has_humans": false,
+      "note": "job ad graphic"
+    },
+    {
+      "id": "ig_skip_013",
+      "platform": "instagram",
+      "file": null,
+      "date": "January 19",
+      "caption": "Nat and Forest jumping into 2026 at Wallaby Hill. Getting prepped for a great season ahead!",
+      "comments": [],
+      "has_humans": true,
+      "note": "video"
+    },
+    {
+      "id": "fb_010",
+      "platform": "facebook",
+      "file": "fb_010.jpg",
+      "date": "November 11, 2025",
+      "caption": "Rider doing dressage at Calgary Park indoor arena",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "ig_skip_014",
+      "platform": "instagram",
+      "file": null,
+      "date": "January 12",
+      "caption": "Congratulations to @bella_g_equestr1an over the weekend at Bowral show - taking home three 1st, two 2nd and two third places, onboard her new pony!",
+      "comments": [],
+      "has_humans": true,
+      "note": "video"
+    },
+    {
+      "id": "fb_011",
+      "platform": "facebook",
+      "file": "fb_011.jpg",
+      "date": "November 11, 2025",
+      "caption": "Rider on horse in indoor arena at Calgary Park",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "ig_skip_015",
+      "platform": "instagram",
+      "file": null,
+      "date": "January 5",
+      "caption": "@rache_ista and Charlotte on a bush ride this week",
+      "comments": [],
+      "has_humans": true,
+      "note": "video, won't play"
+    },
+    {
+      "id": "fb_012",
+      "platform": "facebook",
+      "file": "fb_012.jpg",
+      "date": "November 9, 2025",
+      "caption": "Rider jumping at Camden Bicentennial Equestrian Park",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "ig_skip_016",
+      "platform": "instagram",
+      "file": null,
+      "date": "December 31, 2025",
+      "caption": "Ashra kicking goals with her new pony, Harley. Let the pole work and fun begin! We wish them all the best in their new journey together",
+      "comments": [
+        "00mk00: thumbs up"
+      ],
+      "has_humans": true,
+      "note": "video - young girl with pony, great social proof"
+    },
+    {
+      "id": "ig_skip_017",
+      "platform": "instagram",
+      "file": null,
+      "date": "December 25, 2025",
+      "caption": "Christmas morning here at IC - carrots for all the ponies, goats and chickens! Wishing everyone a very merry Christmas!",
+      "comments": [
+        "amberkennymusic (verified): Merry Christmas Nat love ya xxx",
+        "kimo_elderberry: Have a happy day beautiful Nat, and to all the ponies, you're the best!",
+        "michelle_280809: That is Sooooo Beautiful. Merry Christmas Nat",
+        "rachael.pawley: Merry Christmas Nat, miss you xx"
+      ],
+      "has_humans": true,
+      "note": "video - Nat in IC branded cap, GREAT community comments, 80 likes"
+    },
+    {
+      "id": "fb_skip_004",
+      "platform": "facebook",
+      "file": null,
+      "date": "October 26, 2025",
+      "caption": "Horse portrait with ribbon at Bong Bong Picnic Race Club, Bowral NSW",
+      "comments": [],
+      "has_humans": false
+    },
+    {
+      "id": "ig_skip_018",
+      "platform": "instagram",
+      "file": null,
+      "date": "December 24, 2025",
+      "caption": "Wishing all our friends and community, a very merry Christmas! Have a safe and happy holiday season!",
+      "comments": [
+        "misshailz: Merry Christmas",
+        "michelle_280809: Merry Christmas Nat and the Inner Circle Family"
+      ],
+      "has_humans": false,
+      "note": "video won't play, community Christmas post"
+    },
+    {
+      "id": "fb_013",
+      "platform": "facebook",
+      "file": "fb_013.jpg",
+      "date": "October 13, 2025",
+      "caption": "Rider on horse in indoor arena, beautiful autumn setting",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "ig_skip_019",
+      "platform": "instagram",
+      "file": null,
+      "date": "December 20, 2025",
+      "caption": "@alisonwalker108 enjoying her first trail ride with Darcy and Nat during the week. Calgary Park is surrounded by the most beautiful bushland, perfect for exploring and enjoying!",
+      "comments": [
+        "rache_ista: Awesome",
+        "realpfg: Maybe Split and I can come over and go for a spin with you guys one day."
+      ],
+      "has_humans": true,
+      "note": "video - trail ride, 70 likes, great brand copy about location"
+    },
+    {
+      "id": "fb_014",
+      "platform": "facebook",
+      "file": "fb_014.jpg",
+      "date": "September 30, 2025",
+      "caption": "Rider on horse at show, outdoor setting with horse float in background",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "ig_skip_020",
+      "platform": "instagram",
+      "file": null,
+      "date": "December 8, 2025",
+      "caption": "WORKING PUPIL WANTED - SOUTHERN HIGHLANDS. Start Date: Ideally January. What You'll Be Doing: Catching & handling horses, Rugging & unrugging, Feeding & daily care routines, General stable/property tasks, Tacking up & untacking for work. Hours: Full-time across 5 days, Mostly Monday-Friday, Some weekends when required. If you're reliable, hardworking and passionate about horses, we'd love to hear from you!",
+      "comments": [
+        "annieoldiron: Wish I was 20 again"
+      ],
+      "has_humans": false,
+      "note": "job ad - same as FB version but with full details"
+    },
+    {
+      "id": "fb_015",
+      "platform": "facebook",
+      "file": "fb_015.jpg",
+      "date": "September 22, 2025",
+      "caption": "Rider doing dressage in outdoor arena with autumn trees",
+      "comments": [],
+      "has_humans": true
+    },
+    {
+      "id": "ig_skip_021",
+      "platform": "instagram",
+      "file": null,
+      "date": "November 22, 2025",
+      "caption": "Beck & Herbie. Soo, soo proud of this combination! All their hard work, patience, and dedication is truly paying off. These two share something special - a bond that shines through in every ride, every challenge, and every little win along the way. Here's to this incredible partnership and everything still to come! #ProudCoachMoment",
+      "comments": [
+        "misshailz: These two are something really special! Both are beautiful inside and out!"
+      ],
+      "has_humans": true,
+      "note": "video - OUTSTANDING brand testimonial/copy"
+    },
+    {
+      "id": "fb_016",
+      "platform": "facebook",
+      "file": "fb_016.jpg",
+      "date": "September 16, 2025",
+      "caption": "Woman smiling with Thoroughbred Sport Horse Association championship sashes at Calgary Park",
+      "comments": [],
+      "has_humans": true,
+      "note": "EXCELLENT social proof - client with award sashes"
+    },
+    {
+      "id": "ig_skip_022",
+      "platform": "instagram",
+      "file": null,
+      "date": "November 20, 2025",
+      "caption": "Nat and Forest have been spending plenty of time getting to know each other, building trust, confidence, and all the good foundations for an exciting year ahead. With plans in place for a bit of eventing in 2026, we're loving watching this partnership grow stride by stride. Pictured having a great lesson with Bruce Greenslade!",
+      "comments": [],
+      "has_humans": true,
+      "note": "video - lesson with Bruce Greenslade"
+    },
+    {
+      "id": "fb_017",
+      "platform": "facebook",
+      "file": "fb_017.jpg",
+      "date": "September 14, 2025",
+      "caption": "Calgary Park stables - people tacking up horses, shows the property and Calgary Park sign. Part-Time Experienced Worker Wanted post.",
+      "comments": [],
+      "has_humans": true,
+      "note": "shows the property/facilities with people"
+    },
+    {
+      "id": "ig_004",
+      "platform": "instagram",
+      "file": "ig_004.jpg",
+      "date": "November 11, 2025",
+      "caption": "Horses for sale currently: 1. Phoebe - 16yo 16hh thoroughbred mare, beautiful mover, priced at 6k. 2. Rio - 15.2hh 15yo thoroughbred gelding, proven show hack and dressage mount, priced at 10k. 3. True Myth - 11yo 15.2hh thoroughbred gelding, beautiful movement, priced at 5k. Contact Nat on 0456 634 983",
+      "comments": [],
+      "has_humans": true,
+      "note": "STILL PHOTO - rider doing dressage, horses for sale listing"
+    },
+    {
+      "id": "ig_005",
+      "platform": "instagram",
+      "file": "ig_005.jpg",
+      "date": "November 9, 2025",
+      "caption": "Imogen and Bentley had a very successful Sunday at @haraequine showjumping, taking home a 3rd place. This team has worked so hard over the last year, and are now reaping the results. Super proud of you guys",
+      "comments": [],
+      "has_humans": true,
+      "note": "STILL PHOTO - rider with ribbon on paint horse, 68 likes"
+    },
+    {
+      "id": "ig_skip_023",
+      "platform": "instagram",
+      "file": null,
+      "date": "November 6, 2025",
+      "caption": "True Myth 11yo OTT 15.2hh gelding for sale. Currently in full work showing a willing and trainable nature. Located Berrima NSW, Price 5k. Contact Nat 0456 634 983",
+      "comments": [],
+      "has_humans": true,
+      "note": "video - horse for sale"
+    },
+    {
+      "id": "ig_skip_024",
+      "platform": "instagram",
+      "file": null,
+      "date": "October 28, 2025",
+      "caption": "Ava and Sansa making light work of a grid this week with @innes842. Go girls!",
+      "comments": [
+        "innes842: heart fire",
+        "misshailz: Girls on fire!!",
+        "emmalauren.eq: clapping"
+      ],
+      "has_humans": true,
+      "note": "video - jumping lesson in arena"
+    },
+    {
+      "id": "ig_skip_025",
+      "platform": "instagram",
+      "file": null,
+      "date": "October 27, 2025",
+      "caption": "Big congratulations to @rache_ista for winning ribbons on her beautiful Wylie at @bowraldressageclub at their first dressage competition together. We are so proud of you!",
+      "comments": [
+        "farrier_mark_an_co: fire",
+        "misshailz: Super stars!",
+        "acf.eventing: So cute!!",
+        "mrs_jan_robinson: clapping"
+      ],
+      "has_humans": true,
+      "note": "video - 59 likes, 10 FB comments, great testimonial"
+    },
+    {
+      "id": "ig_006",
+      "platform": "instagram",
+      "file": "ig_006.jpg",
+      "date": "October 26, 2025",
+      "caption": "The team had a successful outing at @bowraldressageclub on Saturday, in the beautiful sunshine. Everyone came home with ribbons, personal bests, and plenty to be proud of! Congratulations team!",
+      "comments": [],
+      "has_humans": true,
+      "note": "STILL PHOTO carousel - woman with grey horse and ribbons, 69 likes"
+    }
+  ]
+}
