@@ -205,11 +205,16 @@ body {
 
 /* Mobile adjustments */
 @media (max-width: 640px) {
-  .bg-image img { object-position: 30% 15%; }
+  .bg-image img { object-position: 35% 20%; }
   .mark { width: 70px; height: 70px; margin-bottom: 2rem; }
   .content { padding: 1.5rem; }
   .contact .sep { display: none; }
   .contact a { display: block; margin-bottom: 0.5rem; }
+}
+
+/* Ensure centring on all intermediate sizes */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .bg-image img { object-position: 30% 20%; }
 }
 </style>
 </head>
