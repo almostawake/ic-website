@@ -178,13 +178,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     <div class="grid md:grid-cols-3 gap-6 items-stretch stagger">
       <!-- Monika -->
-      <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden flex flex-col">
+      <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden flex flex-col" x-data="{ expanded: false }">
         <div class="aspect-[3/2] overflow-hidden">
           <img src="{{ '/assets/images/testimonial-monika.jpg' | relative_url }}" alt="Monika hugging her horse Paddy after a breakthrough lesson" class="w-full h-full object-cover">
         </div>
         <div class="p-8 flex flex-col flex-1">
           <p class="font-display text-base font-normal italic text-ic-text leading-relaxed flex-1">
-            "Paddy and I had a BIG breakthrough in our lesson with Nat today. With Nat's incredible guidance, everything just clicked. I went from grinning ear to ear... to full happy tears."
+            "Paddy and I had a BIG breakthrough in our lesson with Nat today. With Nat's incredible guidance, everything just clicked. I went from grinning ear to ear... to full happy tears. So proud of my boy and so grateful for the team around us."
           </p>
           <div class="mt-6 pt-4 border-t border-[rgba(28,40,86,0.1)]">
             <p class="font-sans text-sm font-medium text-ic-navy">Monika</p>
@@ -193,24 +193,30 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
 
-      <!-- Rachel -->
-      <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden flex flex-col">
-        <div class="aspect-[3/2] overflow-hidden border-b border-dashed border-ic-steel/30 bg-white flex items-center justify-center">
-          <span class="text-ic-ash text-sm font-light">Photo — Rachel &amp; Wylie</span>
+      <!-- Jan -->
+      <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden flex flex-col" x-data="{ expanded: false }">
+        <div class="aspect-[3/2] overflow-hidden">
+          <img src="{{ '/assets/images/testimonial-jan.jpg' | relative_url }}" alt="Jan kissing Napoleon after a competition" class="w-full h-full object-cover">
         </div>
         <div class="p-8 flex flex-col flex-1">
           <p class="font-display text-base font-normal italic text-ic-text leading-relaxed flex-1">
-            "After focused work on our partnership, groundwork, and boundaries, we're stepping into the new year stronger than ever. Wylie is willing, engaged, and eager to please."
+            "From the very beginning, you saw something in me I couldn't yet see in myself. You built my confidence, shaped my riding, and guided me with patience, honesty, and unwavering belief."
+            <span x-show="!expanded" class="text-ic-steel cursor-pointer hover:text-ic-navy transition" @click="expanded = true">&hellip; read more</span>
           </p>
+          <div x-show="expanded" x-collapse>
+            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed mt-4">
+              "Because of you, I didn't just learn how to ride — I learned how to trust, push past fear, and aim higher than I ever imagined. Every clear round, every milestone, every moment carries your influence."
+            </p>
+          </div>
           <div class="mt-6 pt-4 border-t border-[rgba(28,40,86,0.1)]">
-            <p class="font-sans text-sm font-medium text-ic-navy">Rachel</p>
-            <p class="font-mono text-[0.6rem] tracking-[0.05em] text-ic-ash">Rachel &amp; Wylie</p>
+            <p class="font-sans text-sm font-medium text-ic-navy">Jan</p>
+            <p class="font-mono text-[0.6rem] tracking-[0.05em] text-ic-ash">Jan &amp; Napoleon</p>
           </div>
         </div>
       </div>
 
       <!-- Hailey -->
-      <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden flex flex-col">
+      <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden flex flex-col" x-data="{ expanded: false }">
         <div class="aspect-[3/2] overflow-hidden border-b border-dashed border-ic-steel/30 bg-white flex items-center justify-center">
           <span class="text-ic-ash text-sm font-light">Photo — Beck &amp; Herbie</span>
         </div>
