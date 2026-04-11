@@ -3,7 +3,7 @@
 ## Ways of Working
 
 ### Always visually verify before completing a task
-Before declaring any visual task done, screenshot the result and review it yourself. If something is obviously wrong — text clashing with a background, images not centred, layout broken, bleed between sections — fix it before presenting to the user. Do multiple iterations silently if needed. The user should see your best effort, not your first attempt.
+Screenshot the **deployed or locally-served URL in a real browser** — never a file:// path, never DevTools-only. DevTools viewport captures don't match real browser rendering (browser chrome eats vertical space, shifting centering and layout). If the user sends a screenshot that contradicts yours, theirs is correct — fix it, don't explain the discrepancy.
 
 ### Self-assess image crops and visual adjustments
 When cropping or adjusting images, look at the result critically before presenting it. Check: is the subject centred? Are important elements cut off? Does it look intentional? If not, iterate. Don't present three variations when you can see that two of them are clearly wrong.

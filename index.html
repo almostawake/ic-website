@@ -47,17 +47,17 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 25% 20%;
+  object-position: 30% 25%;
 }
 
-/* Overlay — navy gradient for text readability */
+/* Overlay — navy with subtle centre vignette for text readability */
 .bg-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background:
-    radial-gradient(ellipse 120% 100% at 30% 50%, rgba(28, 40, 86, 0.85) 0%, rgba(28, 40, 86, 0.55) 50%, rgba(28, 40, 86, 0.3) 100%),
-    linear-gradient(135deg, rgba(28, 40, 86, 0.7) 0%, rgba(28, 40, 86, 0.2) 100%);
+    radial-gradient(ellipse 80% 70% at 50% 45%, rgba(28, 40, 86, 0.55) 0%, rgba(28, 40, 86, 0.8) 100%),
+    linear-gradient(to bottom, rgba(28, 40, 86, 0.6) 0%, rgba(28, 40, 86, 0.5) 50%, rgba(28, 40, 86, 0.7) 100%);
 }
 
 /* Floating circle motifs */
@@ -205,7 +205,7 @@ body {
 
 /* Mobile adjustments */
 @media (max-width: 640px) {
-  .bg-image img { object-position: 35% 20%; }
+  .bg-image img { object-position: 32% 20%; }
   .mark { width: 70px; height: 70px; margin-bottom: 2rem; }
   .content { padding: 1.5rem; }
   .contact .sep { display: none; }
