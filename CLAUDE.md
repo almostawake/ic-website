@@ -22,6 +22,9 @@ When generating content (descriptions, palette options, brand copy), provide it 
 ### Lead with a recommendation
 When presenting options, lead with your recommendation and explain why. The user values opinionated guidance over neutral menus. "Go with your gut" is the default mode.
 
+### Adding a new testimonial
+When adding a new rider testimonial (new photo + quote to the `#testimonials` grid), read `CLAUDE-TESTIMONIALS.md` before making any edits or crops. It covers the cropping rules, herald-quote selection, and card structure we've iterated on.
+
 ## Brand
 
 ### Identity

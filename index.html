@@ -176,19 +176,30 @@ document.addEventListener('DOMContentLoaded', () => {
       </h2>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-6 items-stretch max-w-4xl mx-auto stagger">
-      <!-- Monika -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch stagger">
+      <!-- Alison -->
       <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden flex flex-col" x-data="{ expanded: false }">
         <div class="aspect-[3/2] overflow-hidden">
-          <img src="{{ '/assets/images/testimonial-monika.jpg' | relative_url }}" alt="Monika hugging her horse Paddy after a breakthrough lesson" class="w-full h-full object-cover">
+          <img src="{{ '/assets/images/testimonial-alison.jpg' | relative_url }}" alt="Alison with her horse Darcy at the covered arena" class="w-full h-full object-cover">
         </div>
         <div class="p-8 flex flex-col flex-1">
-          <p class="font-display text-base font-normal italic text-ic-text leading-relaxed flex-1">
-            "Paddy and I had a BIG breakthrough in our lesson with Nat today. With Nat's incredible guidance, everything just clicked. I went from grinning ear to ear... to full happy tears. So proud of my boy and so grateful for the team around us."
-          </p>
+          <div x-show="!expanded" class="flex-1 flex flex-col">
+            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed flex-1">
+              "It is my happy place. My horse is looked after as if he were Natalie's own — I leave each day knowing he's in the very best of hands."
+            </p>
+            <button type="button" @click="expanded = true" class="mt-4 self-start font-mono text-[0.6rem] tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; read more</button>
+          </div>
+          <div x-show="expanded" x-collapse class="flex-1 flex flex-col">
+            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed">
+              "If you are looking for an agistment where the owner will support not only you but also your horse — in an environment suited to ground work in a covered arena, trail rides, a jumping area, single paddocks where the horses are fed twice daily and looked after as if they are Natalie's own horses — Inner Circle is a unique business offering well above and beyond any other agistment centre in the area."
+            </p>
+            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed mt-4 flex-1">
+              "It is my happy place, and I leave each day knowing my horse is in the very best of hands. I love my lessons with Nat, whose patience and teaching skills are highly recommended."
+            </p>
+            <button type="button" @click="expanded = false" class="mt-4 self-start font-mono text-[0.6rem] tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; show less</button>
+          </div>
           <div class="mt-6 pt-4 border-t border-[rgba(28,40,86,0.1)]">
-            <p class="font-sans text-sm font-medium text-ic-navy">Monika</p>
-            <p class="font-mono text-[0.6rem] tracking-[0.05em] text-ic-ash">Monika &amp; Paddy</p>
+            <p class="text-ic-navy"><span class="font-sans text-sm font-medium">Alison</span> <span class="font-mono text-[0.68rem] tracking-[0.05em] text-ic-ash">&amp;</span> <span class="font-mono text-sm tracking-[0.05em] text-ic-ash">Darcy</span></p>
           </div>
         </div>
       </div>
@@ -199,18 +210,74 @@ document.addEventListener('DOMContentLoaded', () => {
           <img src="{{ '/assets/images/testimonial-jan.jpg' | relative_url }}" alt="Jan kissing Napoleon after a competition" class="w-full h-full object-cover">
         </div>
         <div class="p-8 flex flex-col flex-1">
-          <p class="font-display text-base font-normal italic text-ic-text leading-relaxed flex-1">
-            "From the very beginning, you saw something in me I couldn't yet see in myself. You built my confidence, shaped my riding, and guided me with patience, honesty, and unwavering belief."
-            <span x-show="!expanded" class="text-ic-steel cursor-pointer hover:text-ic-navy transition" @click="expanded = true">&hellip; read more</span>
-          </p>
-          <div x-show="expanded" x-collapse>
-            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed mt-4">
+          <div x-show="!expanded" class="flex-1 flex flex-col">
+            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed flex-1">
+              "You saw something in me I couldn't yet see in myself. I didn't just learn how to ride — I learned how to trust, push past fear, and aim higher than I ever imagined."
+            </p>
+            <button type="button" @click="expanded = true" class="mt-4 self-start font-mono text-[0.6rem] tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; read more</button>
+          </div>
+          <div x-show="expanded" x-collapse class="flex-1 flex flex-col">
+            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed">
+              "From the very beginning, you saw something in me I couldn't yet see in myself. You built my confidence, shaped my riding, and guided me with patience, honesty, and unwavering belief."
+            </p>
+            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed mt-4 flex-1">
               "Because of you, I didn't just learn how to ride — I learned how to trust, push past fear, and aim higher than I ever imagined. Every clear round, every milestone, every moment carries your influence."
             </p>
+            <button type="button" @click="expanded = false" class="mt-4 self-start font-mono text-[0.6rem] tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; show less</button>
           </div>
           <div class="mt-6 pt-4 border-t border-[rgba(28,40,86,0.1)]">
-            <p class="font-sans text-sm font-medium text-ic-navy">Jan</p>
-            <p class="font-mono text-[0.6rem] tracking-[0.05em] text-ic-ash">Jan &amp; Napoleon</p>
+            <p class="text-ic-navy"><span class="font-sans text-sm font-medium">Jan</span> <span class="font-mono text-[0.68rem] tracking-[0.05em] text-ic-ash">&amp;</span> <span class="font-mono text-sm tracking-[0.05em] text-ic-ash">Napoleon</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Monika -->
+      <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden flex flex-col" x-data="{ expanded: false }">
+        <div class="aspect-[3/2] overflow-hidden">
+          <img src="{{ '/assets/images/testimonial-monika.jpg' | relative_url }}" alt="Monika hugging her horse Paddy after a breakthrough lesson" class="w-full h-full object-cover">
+        </div>
+        <div class="p-8 flex flex-col flex-1">
+          <p class="font-display text-base font-normal italic text-ic-text leading-relaxed flex-1">
+            "Paddy and I had a BIG breakthrough in our lesson with Nat today. With Nat's incredible guidance, everything just clicked. I went from grinning ear to ear... to full happy tears. So proud of my boy and so grateful for the team around us."
+          </p>
+          <div class="mt-6 pt-4 border-t border-[rgba(28,40,86,0.1)]">
+            <p class="text-ic-navy"><span class="font-sans text-sm font-medium">Monika</span> <span class="font-mono text-[0.68rem] tracking-[0.05em] text-ic-ash">&amp;</span> <span class="font-mono text-sm tracking-[0.05em] text-ic-ash">Paddy</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Eden -->
+      <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden flex flex-col" x-data="{ expanded: false }">
+        <div class="aspect-[3/2] overflow-hidden">
+          <img src="{{ '/assets/images/testimonial-eden.jpg' | relative_url }}" alt="Eden laughing as her horse Missy eats from her hand at sunset" class="w-full h-full object-cover">
+        </div>
+        <div class="p-8 flex flex-col flex-1">
+          <div x-show="!expanded" class="flex-1 flex flex-col">
+            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed flex-1">
+              "She treats my horse Missy as if she were her own, always putting her wellbeing first and making thoughtful decisions that reflect her experience and dedication. That level of care gives me so much trust in her and puts me at ease knowing my horse is being taken care of properly while I'm in Sydney."
+            </p>
+            <button type="button" @click="expanded = true" class="mt-4 self-start font-mono text-[0.6rem] tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; read more</button>
+          </div>
+          <div x-show="expanded" x-collapse class="flex-1 flex flex-col">
+            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed">
+              "I can honestly say that ever since being part of Inner Circle and being guided by Nat, my riding has completely transformed. Nat has an incredible ability to break things down and explain them in a way that just clicks. No matter how complex something feels, she always finds a way to make it easy to understand, which has made such a difference in my progress."
+            </p>
+            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed mt-4">
+              "She constantly pushes you to be the best rider you can be, while still making you feel supported every step of the way. She truly cares, not just about your riding, but about you as a person, and that shows in everything she does."
+            </p>
+            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed mt-4">
+              "What truly sets her apart is how much she genuinely cares, not just about her riders, but about the horses as well. She treats my horse Missy as if she were her own, always putting her wellbeing first. That level of care puts me at ease knowing my horse is being taken care of properly while I'm in Sydney."
+            </p>
+            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed mt-4">
+              "She has created such a welcoming and supportive environment at the yard. It's a place where you feel comfortable, encouraged, and motivated, no matter your level. I always look forward to going there — it's not just about riding, it's about being part of a positive and friendly atmosphere."
+            </p>
+            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed mt-4 flex-1">
+              "I feel incredibly lucky to train with someone so knowledgeable, passionate, and genuinely invested in both horse and rider. She has made me a better rider in every sense."
+            </p>
+            <button type="button" @click="expanded = false" class="mt-4 self-start font-mono text-[0.6rem] tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; show less</button>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[rgba(28,40,86,0.1)]">
+            <p class="text-ic-navy"><span class="font-sans text-sm font-medium">Eden</span> <span class="font-mono text-[0.68rem] tracking-[0.05em] text-ic-ash">&amp;</span> <span class="font-mono text-sm tracking-[0.05em] text-ic-ash">Missy</span></p>
           </div>
         </div>
       </div>
