@@ -177,114 +177,42 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch stagger">
-      <!-- Alison -->
+      {% for t in site.data.testimonials %}
       <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden flex flex-col" x-data="{ expanded: false }">
         <div class="aspect-[3/2] overflow-hidden">
-          <img src="{{ '/assets/images/testimonial-alison.jpg' | relative_url }}" alt="Alison with her horse Darcy at the covered arena" class="w-full h-full object-cover">
+          <img src="{{ '/assets/images/' | append: t.image | relative_url }}" alt="{{ t.alt }}" class="w-full h-full object-cover">
         </div>
         <div class="p-8 flex flex-col flex-1">
-          <div x-show="!expanded" class="flex-1 flex flex-col">
-            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed">
-              "Inner Circle is a unique business, offering well above and beyond any other agistment centre in the area."
+          {% if t.full %}
+            <div x-show="!expanded" class="flex-1 flex flex-col">
+              {% for para in t.herald %}
+              <p class="font-display text-base font-normal italic text-ic-text leading-relaxed{% if forloop.first == false %} mt-4{% endif %}{% if forloop.last %} flex-1{% endif %}">
+                "{{ para }}"
+              </p>
+              {% endfor %}
+              <button type="button" @click="expanded = true" class="mt-4 self-start font-mono text-[0.6rem] tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; read more</button>
+            </div>
+            <div x-show="expanded" x-collapse class="flex-1 flex flex-col">
+              {% for para in t.full %}
+              <p class="font-display text-base font-normal italic text-ic-text leading-relaxed{% if forloop.first == false %} mt-4{% endif %}{% if forloop.last %} flex-1{% endif %}">
+                "{{ para }}"
+              </p>
+              {% endfor %}
+              <button type="button" @click="expanded = false" class="mt-4 self-start font-mono text-[0.6rem] tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; show less</button>
+            </div>
+          {% else %}
+            {% for para in t.herald %}
+            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed{% if forloop.first == false %} mt-4{% endif %}{% if forloop.last %} flex-1{% endif %}">
+              "{{ para }}"
             </p>
-            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed mt-4 flex-1">
-              "It is my happy place. My horse is looked after as if he were Natalie's own — I leave each day knowing he's in the very best of hands."
-            </p>
-            <button type="button" @click="expanded = true" class="mt-4 self-start font-mono text-[0.6rem] tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; read more</button>
-          </div>
-          <div x-show="expanded" x-collapse class="flex-1 flex flex-col">
-            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed">
-              "If you are looking for an agistment where the owner will support not only you but also your horse — in an environment suited to ground work in a covered arena, trail rides, a jumping area, single paddocks where the horses are fed twice daily and looked after as if they are Natalie's own horses — Inner Circle is a unique business offering well above and beyond any other agistment centre in the area."
-            </p>
-            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed mt-4 flex-1">
-              "It is my happy place, and I leave each day knowing my horse is in the very best of hands. I love my lessons with Nat, whose patience and teaching skills are highly recommended."
-            </p>
-            <button type="button" @click="expanded = false" class="mt-4 self-start font-mono text-[0.6rem] tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; show less</button>
-          </div>
+            {% endfor %}
+          {% endif %}
           <div class="mt-6 pt-4 border-t border-[rgba(28,40,86,0.1)]">
-            <p class="text-ic-navy"><span class="font-sans text-sm font-medium">Alison</span> <span class="font-mono text-[0.68rem] tracking-[0.05em] text-ic-ash">&amp;</span> <span class="font-mono text-sm tracking-[0.05em] text-ic-ash">Darcy</span></p>
+            <p class="text-ic-navy"><span class="font-sans text-sm font-medium">{{ t.name }}</span> <span class="font-mono text-[0.68rem] tracking-[0.05em] text-ic-ash">&amp;</span> <span class="font-mono text-sm tracking-[0.05em] text-ic-ash">{{ t.horse }}</span></p>
           </div>
         </div>
       </div>
-
-      <!-- Jan -->
-      <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden flex flex-col" x-data="{ expanded: false }">
-        <div class="aspect-[3/2] overflow-hidden">
-          <img src="{{ '/assets/images/testimonial-jan.jpg' | relative_url }}" alt="Jan kissing Napoleon after a competition" class="w-full h-full object-cover">
-        </div>
-        <div class="p-8 flex flex-col flex-1">
-          <div x-show="!expanded" class="flex-1 flex flex-col">
-            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed flex-1">
-              "You saw something in me I couldn't yet see in myself. I didn't just learn how to ride — I learned how to trust, push past fear, and aim higher than I ever imagined."
-            </p>
-            <button type="button" @click="expanded = true" class="mt-4 self-start font-mono text-[0.6rem] tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; read more</button>
-          </div>
-          <div x-show="expanded" x-collapse class="flex-1 flex flex-col">
-            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed">
-              "From the very beginning, you saw something in me I couldn't yet see in myself. You built my confidence, shaped my riding, and guided me with patience, honesty, and unwavering belief."
-            </p>
-            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed mt-4 flex-1">
-              "Because of you, I didn't just learn how to ride — I learned how to trust, push past fear, and aim higher than I ever imagined. Every clear round, every milestone, every moment carries your influence."
-            </p>
-            <button type="button" @click="expanded = false" class="mt-4 self-start font-mono text-[0.6rem] tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; show less</button>
-          </div>
-          <div class="mt-6 pt-4 border-t border-[rgba(28,40,86,0.1)]">
-            <p class="text-ic-navy"><span class="font-sans text-sm font-medium">Jan</span> <span class="font-mono text-[0.68rem] tracking-[0.05em] text-ic-ash">&amp;</span> <span class="font-mono text-sm tracking-[0.05em] text-ic-ash">Napoleon</span></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Monika -->
-      <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden flex flex-col" x-data="{ expanded: false }">
-        <div class="aspect-[3/2] overflow-hidden">
-          <img src="{{ '/assets/images/testimonial-monika.jpg' | relative_url }}" alt="Monika hugging her horse Paddy after a breakthrough lesson" class="w-full h-full object-cover">
-        </div>
-        <div class="p-8 flex flex-col flex-1">
-          <p class="font-display text-base font-normal italic text-ic-text leading-relaxed flex-1">
-            "Paddy and I had a BIG breakthrough in our lesson with Nat today. With Nat's incredible guidance, everything just clicked. I went from grinning ear to ear... to full happy tears. So proud of my boy and so grateful for the team around us."
-          </p>
-          <div class="mt-6 pt-4 border-t border-[rgba(28,40,86,0.1)]">
-            <p class="text-ic-navy"><span class="font-sans text-sm font-medium">Monika</span> <span class="font-mono text-[0.68rem] tracking-[0.05em] text-ic-ash">&amp;</span> <span class="font-mono text-sm tracking-[0.05em] text-ic-ash">Paddy</span></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Eden -->
-      <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden flex flex-col" x-data="{ expanded: false }">
-        <div class="aspect-[3/2] overflow-hidden">
-          <img src="{{ '/assets/images/testimonial-eden.jpg' | relative_url }}" alt="Eden laughing as her horse Missy eats from her hand at sunset" class="w-full h-full object-cover">
-        </div>
-        <div class="p-8 flex flex-col flex-1">
-          <div x-show="!expanded" class="flex-1 flex flex-col">
-            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed flex-1">
-              "She treats my horse Missy as if she were her own, always putting her wellbeing first and making thoughtful decisions that reflect her experience and dedication. That level of care gives me so much trust in her and puts me at ease knowing my horse is being taken care of properly while I'm in Sydney."
-            </p>
-            <button type="button" @click="expanded = true" class="mt-4 self-start font-mono text-[0.6rem] tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; read more</button>
-          </div>
-          <div x-show="expanded" x-collapse class="flex-1 flex flex-col">
-            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed">
-              "I can honestly say that ever since being part of Inner Circle and being guided by Nat, my riding has completely transformed. Nat has an incredible ability to break things down and explain them in a way that just clicks. No matter how complex something feels, she always finds a way to make it easy to understand, which has made such a difference in my progress."
-            </p>
-            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed mt-4">
-              "She constantly pushes you to be the best rider you can be, while still making you feel supported every step of the way. She truly cares, not just about your riding, but about you as a person, and that shows in everything she does."
-            </p>
-            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed mt-4">
-              "What truly sets her apart is how much she genuinely cares, not just about her riders, but about the horses as well. She treats my horse Missy as if she were her own, always putting her wellbeing first. That level of care puts me at ease knowing my horse is being taken care of properly while I'm in Sydney."
-            </p>
-            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed mt-4">
-              "She has created such a welcoming and supportive environment at the yard. It's a place where you feel comfortable, encouraged, and motivated, no matter your level. I always look forward to going there — it's not just about riding, it's about being part of a positive and friendly atmosphere."
-            </p>
-            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed mt-4 flex-1">
-              "I feel incredibly lucky to train with someone so knowledgeable, passionate, and genuinely invested in both horse and rider. She has made me a better rider in every sense."
-            </p>
-            <button type="button" @click="expanded = false" class="mt-4 self-start font-mono text-[0.6rem] tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; show less</button>
-          </div>
-          <div class="mt-6 pt-4 border-t border-[rgba(28,40,86,0.1)]">
-            <p class="text-ic-navy"><span class="font-sans text-sm font-medium">Eden</span> <span class="font-mono text-[0.68rem] tracking-[0.05em] text-ic-ash">&amp;</span> <span class="font-mono text-sm tracking-[0.05em] text-ic-ash">Missy</span></p>
-          </div>
-        </div>
-      </div>
-
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -350,65 +278,17 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
 
     <div class="space-y-4 stagger" x-data="{ open: null }">
+      {% for faq in site.data.faqs %}
       <div class="reveal border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden hover:border-[rgba(28,40,86,0.2)] transition-colors">
-        <button @click="open = open === 1 ? null : 1" class="w-full flex items-center justify-between px-6 py-5 text-left">
-          <span class="font-display text-base font-normal text-ic-navy">Do I need my own horse?</span>
-          <svg :class="open === 1 ? 'rotate-180' : ''" class="w-4 h-4 text-ic-ash transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg>
+        <button @click="open = open === {{ forloop.index }} ? null : {{ forloop.index }}" class="w-full flex items-center justify-between px-6 py-5 text-left">
+          <span class="font-display text-base font-normal text-ic-navy">{{ faq.question }}</span>
+          <svg :class="open === {{ forloop.index }} ? 'rotate-180' : ''" class="w-4 h-4 text-ic-ash transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div x-show="open === 1" x-collapse class="px-6 pb-5">
-          <p class="text-sm font-light text-ic-ash leading-relaxed">Yes — most of our members have their own horse agisted here at Calgary Park. A typical week looks like a lesson for you and a schooling session for your horse with Nat, so you're both progressing together. It's a partnership approach — you build confidence while your horse stays in consistent work.</p>
+        <div x-show="open === {{ forloop.index }}" x-collapse class="px-6 pb-5">
+          <p class="text-sm font-light text-ic-ash leading-relaxed">{{ faq.answer }}</p>
         </div>
       </div>
-
-      <div class="reveal border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden hover:border-[rgba(28,40,86,0.2)] transition-colors">
-        <button @click="open = open === 2 ? null : 2" class="w-full flex items-center justify-between px-6 py-5 text-left">
-          <span class="font-display text-base font-normal text-ic-navy">What level do I need to be?</span>
-          <svg :class="open === 2 ? 'rotate-180' : ''" class="w-4 h-4 text-ic-ash transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div x-show="open === 2" x-collapse class="px-6 pb-5">
-          <p class="text-sm font-light text-ic-ash leading-relaxed">Any level. We work with complete beginners through to riders preparing for competition. There's no minimum — just a willingness to learn and enjoy the journey.</p>
-        </div>
-      </div>
-
-      <div class="reveal border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden hover:border-[rgba(28,40,86,0.2)] transition-colors">
-        <button @click="open = open === 3 ? null : 3" class="w-full flex items-center justify-between px-6 py-5 text-left">
-          <span class="font-display text-base font-normal text-ic-navy">I'm nervous — is that okay?</span>
-          <svg :class="open === 3 ? 'rotate-180' : ''" class="w-4 h-4 text-ic-ash transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div x-show="open === 3" x-collapse class="px-6 pb-5">
-          <p class="text-sm font-light text-ic-ash leading-relaxed">More than okay — it's one of the most common reasons people come to us. Nat specialises in working with nervous riders. We go at your pace, build your confidence gradually, and never push you past where you're comfortable.</p>
-        </div>
-      </div>
-
-      <div class="reveal border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden hover:border-[rgba(28,40,86,0.2)] transition-colors">
-        <button @click="open = open === 4 ? null : 4" class="w-full flex items-center justify-between px-6 py-5 text-left">
-          <span class="font-display text-base font-normal text-ic-navy">Do I have to compete?</span>
-          <svg :class="open === 4 ? 'rotate-180' : ''" class="w-4 h-4 text-ic-ash transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div x-show="open === 4" x-collapse class="px-6 pb-5">
-          <p class="text-sm font-light text-ic-ash leading-relaxed">Absolutely not. Many of our riders are here purely to enjoy their horses. Competition support is available when and if you want it — there's zero pressure.</p>
-        </div>
-      </div>
-
-      <div class="reveal border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden hover:border-[rgba(28,40,86,0.2)] transition-colors">
-        <button @click="open = open === 5 ? null : 5" class="w-full flex items-center justify-between px-6 py-5 text-left">
-          <span class="font-display text-base font-normal text-ic-navy">Where are you located?</span>
-          <svg :class="open === 5 ? 'rotate-180' : ''" class="w-4 h-4 text-ic-ash transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div x-show="open === 5" x-collapse class="px-6 pb-5">
-          <p class="text-sm font-light text-ic-ash leading-relaxed">Calgary Park, 180 Birchalls Lane, Berrima NSW 2577 — in the Southern Highlands, about 1.5 hours from Sydney. Beautiful country, great riding, and worth the drive.</p>
-        </div>
-      </div>
-
-      <div class="reveal border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden hover:border-[rgba(28,40,86,0.2)] transition-colors">
-        <button @click="open = open === 6 ? null : 6" class="w-full flex items-center justify-between px-6 py-5 text-left">
-          <span class="font-display text-base font-normal text-ic-navy">Can I visit before committing?</span>
-          <svg :class="open === 6 ? 'rotate-180' : ''" class="w-4 h-4 text-ic-ash transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div x-show="open === 6" x-collapse class="px-6 pb-5">
-          <p class="text-sm font-light text-ic-ash leading-relaxed">Of course. Give Nat a call and come out for a look around. No pressure, no sales pitch — just a chat and a cuppa.</p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

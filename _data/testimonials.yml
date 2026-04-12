@@ -1,0 +1,40 @@
+- name: Alison
+  horse: Darcy
+  image: testimonial-alison.jpg
+  alt: "Alison with her horse Darcy at the covered arena"
+  herald:
+    - "Inner Circle is a unique business, offering well above and beyond any other agistment centre in the area."
+    - "It is my happy place. My horse is looked after as if he were Natalie's own — I leave each day knowing he's in the very best of hands."
+  full:
+    - "If you are looking for an agistment where the owner will support not only you but also your horse — in an environment suited to ground work in a covered arena, trail rides, a jumping area, single paddocks where the horses are fed twice daily and looked after as if they are Natalie's own horses — Inner Circle is a unique business offering well above and beyond any other agistment centre in the area."
+    - "It is my happy place, and I leave each day knowing my horse is in the very best of hands. I love my lessons with Nat, whose patience and teaching skills are highly recommended."
+
+- name: Jan
+  horse: Napoleon
+  image: testimonial-jan.jpg
+  alt: "Jan kissing Napoleon after a competition"
+  herald:
+    - "You saw something in me I couldn't yet see in myself. I didn't just learn how to ride — I learned how to trust, push past fear, and aim higher than I ever imagined."
+  full:
+    - "From the very beginning, you saw something in me I couldn't yet see in myself. You built my confidence, shaped my riding, and guided me with patience, honesty, and unwavering belief."
+    - "Because of you, I didn't just learn how to ride — I learned how to trust, push past fear, and aim higher than I ever imagined. Every clear round, every milestone, every moment carries your influence."
+
+- name: Monika
+  horse: Paddy
+  image: testimonial-monika.jpg
+  alt: "Monika hugging her horse Paddy after a breakthrough lesson"
+  herald:
+    - "Paddy and I had a BIG breakthrough in our lesson with Nat today. With Nat's incredible guidance, everything just clicked. I went from grinning ear to ear... to full happy tears. So proud of my boy and so grateful for the team around us."
+
+- name: Eden
+  horse: Missy
+  image: testimonial-eden.jpg
+  alt: "Eden laughing as her horse Missy eats from her hand at sunset"
+  herald:
+    - "She treats my horse Missy as if she were her own, always putting her wellbeing first and making thoughtful decisions that reflect her experience and dedication. That level of care gives me so much trust in her and puts me at ease knowing my horse is being taken care of properly while I'm in Sydney."
+  full:
+    - "I can honestly say that ever since being part of Inner Circle and being guided by Nat, my riding has completely transformed. Nat has an incredible ability to break things down and explain them in a way that just clicks. No matter how complex something feels, she always finds a way to make it easy to understand, which has made such a difference in my progress."
+    - "She constantly pushes you to be the best rider you can be, while still making you feel supported every step of the way. She truly cares, not just about your riding, but about you as a person, and that shows in everything she does."
+    - "What truly sets her apart is how much she genuinely cares, not just about her riders, but about the horses as well. She treats my horse Missy as if she were her own, always putting her wellbeing first. That level of care puts me at ease knowing my horse is being taken care of properly while I'm in Sydney."
+    - "She has created such a welcoming and supportive environment at the yard. It's a place where you feel comfortable, encouraged, and motivated, no matter your level. I always look forward to going there — it's not just about riding, it's about being part of a positive and friendly atmosphere."
+    - "I feel incredibly lucky to train with someone so knowledgeable, passionate, and genuinely invested in both horse and rider. She has made me a better rider in every sense."
