@@ -45,7 +45,7 @@ When adding a new rider testimonial (new photo + quote to the `#testimonials` gr
 - Avoid imagery that could trigger anxiety (e.g. medals/podiums can alienate the target audience).
 
 ### Design language
-Read `brand/brand-pack.html` CSS and components before building any UI. The aesthetic is editorial-luxury, not SaaS. Key non-obvious rules that are easy to default away from:
+Read `brand-pack.html` (at repo root) CSS and components before building any UI. The aesthetic is editorial-luxury, not SaaS. Key non-obvious rules that are easy to default away from:
 - Cormorant Garamond at weight 300–400, never bold
 - Cream (#F5F0E8) page base, not white
 - Section labels in JetBrains Mono, steel-coloured
@@ -53,7 +53,7 @@ Read `brand/brand-pack.html` CSS and components before building any UI. The aest
 - Faint navy borders on cards, not grey blocks
 
 ### Brand source of truth
-- `brand/brand-pack.html` — visual brand bible (colours, type, logos, copy bank, mockups). This is upstream of everything else.
+- `brand-pack.html` (repo root) — visual brand bible (colours, type, logos, copy bank, mockups). This is upstream of everything else. Served publicly at `/brand-pack/` so it's shareable with Nat and collaborators. The rest of `brand/` is excluded from the Jekyll build.
 - `brand/logo/` — master logo assets (8 variants in PNG + SVG: full lockup, icon+wordmark, icon-only, text-only, each in navy + reverse white).
 - When making a brand decision, update `brand/` first, then propagate to `_data/site.yml` and templates.
 

@@ -15,3 +15,9 @@ exclude:
   - Gemfile.lock
   - node_modules
   - README.md
+  - brand
+  - index-v1.html
+  - index-coming-soon.html
+  - CLAUDE.md
+  - CLAUDE-TESTIMONIALS.md
+  - photos
