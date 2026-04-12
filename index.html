@@ -23,67 +23,43 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="absolute inset-0 bg-gradient-to-b from-ic-navy/60 via-ic-navy/40 to-ic-navy/80"></div>
 
   <div class="relative z-10 text-center px-8 max-w-3xl">
-    <!-- Horse mark -->
-    <div class="w-28 h-28 mx-auto mb-8">
-      <img src="{{ '/brand/logo/ice-logo-icon-reverse.svg' | relative_url }}" alt="Inner Circle horse mark" class="w-full h-full">
-    </div>
-    <p class="font-mono text-[0.64rem] font-medium tracking-[0.3em] uppercase text-white/35 mb-8">Supported by Natalie Innes</p>
+    <p class="font-mono text-[0.64rem] font-medium tracking-[0.3em] uppercase text-ic-gold mb-8">Supported by Natalie Innes</p>
     <h1 class="font-display text-5xl md:text-7xl font-light text-white leading-[1.05] tracking-tight">
       {{ site.data.site.tagline }}
     </h1>
-    <p class="font-display text-xl font-light italic text-ic-sky/70 mt-6">
-      A supportive equestrian community for amateur horse owners
-    </p>
-    <p class="font-sans text-base font-light text-white/40 max-w-lg mx-auto mt-6 leading-relaxed">
+    <p class="font-sans text-base font-light text-white/70 max-w-lg mx-auto mt-6 leading-relaxed">
       Agistment, lessons, horse training, and competition support in the beautiful Southern Highlands.
     </p>
     <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="#contact" class="px-6 py-2.5 rounded-brand bg-ic-navy border border-white/20 hover:border-white/40 text-white text-sm font-medium tracking-wide transition">
+      <a href="#contact" class="px-6 py-3 rounded-brand bg-ic-navy border border-white/20 hover:border-white/40 text-white text-base font-medium tracking-wide transition">
         Get in Touch
       </a>
-      <a href="#about" class="px-6 py-2.5 rounded-brand border border-white/10 hover:border-white/25 text-white/60 hover:text-white text-sm font-light tracking-wide transition">
+      <a href="#about" class="px-6 py-3 rounded-brand border border-ic-gold/60 hover:border-ic-gold text-ic-gold hover:text-ic-gold text-base font-light tracking-wide transition">
         Learn More
       </a>
     </div>
   </div>
-
-  <!-- Scroll indicator -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-    <span class="font-mono text-[0.6rem] tracking-[0.15em] uppercase text-white/30">Scroll</span>
-    <div class="w-px h-8 bg-gradient-to-b from-white/30 to-transparent"></div>
-  </div>
 </section>
 
 <!-- Problem / Empathy -->
-<section class="py-24 md:py-32 bg-white border-t border-b border-[rgba(28,40,86,0.1)]">
+<section class="py-20 md:py-24 bg-ic-cream">
   <div class="max-w-3xl mx-auto px-8 reveal">
-    <p class="font-mono text-[0.64rem] font-medium tracking-[0.2em] uppercase text-ic-steel mb-4">The Gap</p>
+    <div class="flex items-center gap-3 mb-4">
+      <span class="block w-8 h-px bg-ic-gold"></span>
+      <p class="font-mono text-xs font-medium tracking-[0.2em] uppercase text-ic-steel">The Gap</p>
+    </div>
     <h2 class="font-display text-3xl md:text-[3rem] font-light text-ic-navy leading-[1.15] mb-6">
       The equestrian world wasn't built for you.
     </h2>
-    <p class="text-base font-light text-ic-ash leading-relaxed mb-4">
+    <p class="text-lg font-light text-ic-text leading-relaxed mb-4">
       The industry caters to children and elite competitors. If you're an amateur horse owner — someone who rides for the love of it, fits horses around work and life, and just wants to do right by their horse — you're often left to figure it out alone.
     </p>
-    <p class="text-base font-light text-ic-ash leading-relaxed mb-4">
+    <p class="text-lg font-light text-ic-text leading-relaxed mb-4">
       Feeling stuck, nervous, or doing it alone? You don't have to be.
     </p>
-    <p class="text-base font-light text-ic-text leading-relaxed">
+    <p class="text-lg font-light text-ic-text leading-relaxed">
       Inner Circle Equestrian exists for riders like you — a place where you and your horse get the support you both deserve, without pressure, without judgement, and without assumptions about where you "should" be.
     </p>
-  </div>
-</section>
-
-<!-- Values -->
-<section class="py-20 bg-ic-cream">
-  <div class="max-w-[1200px] mx-auto px-8">
-    <div class="grid md:grid-cols-3 gap-8 stagger">
-      {% for value in site.data.site.values %}
-      <div class="reveal bg-white border border-[rgba(28,40,86,0.1)] rounded-brand-lg p-8 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-        <h3 class="font-display text-xl font-normal text-ic-navy mb-3">{{ value.word }}</h3>
-        <p class="text-sm font-light text-ic-ash leading-relaxed">{{ value.description }}</p>
-      </div>
-      {% endfor %}
-    </div>
   </div>
 </section>
 
@@ -91,11 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
 <section id="services" class="py-24 md:py-32 bg-white border-t border-b border-[rgba(28,40,86,0.1)]">
   <div class="max-w-[1200px] mx-auto px-8">
     <div class="reveal">
-      <p class="font-mono text-[0.64rem] font-medium tracking-[0.2em] uppercase text-ic-steel mb-4">What We Offer</p>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="block w-8 h-px bg-ic-gold"></span>
+        <p class="font-mono text-xs font-medium tracking-[0.2em] uppercase text-ic-steel">What We Offer</p>
+      </div>
       <h2 class="font-display text-3xl md:text-[3rem] font-light text-ic-navy leading-[1.15] mb-4">
         Everything under one roof
       </h2>
-      <p class="text-base font-light text-ic-ash max-w-xl leading-relaxed mb-12">
+      <p class="text-lg font-light text-ic-text max-w-xl leading-relaxed mb-12">
         From daily care to competition day — we're with you at every step.
       </p>
     </div>
@@ -105,39 +84,41 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg p-8 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
         <p class="font-mono text-[0.6rem] tracking-[0.1em] uppercase text-ic-steel mb-2">{{ service.label }}</p>
         <h3 class="font-display text-lg font-normal text-ic-navy mb-3">{{ service.title }}</h3>
-        <p class="text-sm font-light text-ic-ash leading-relaxed">
+        <p class="text-base font-normal text-ic-text leading-relaxed">
           {{ service.description }}
         </p>
       </div>
       {% endfor %}
     </div>
 
-    <p class="text-sm font-light text-ic-ash mt-10 reveal">
-      Plus: clinics with external professionals, trail rides, beach rides, and social events.
-    </p>
   </div>
 </section>
 
 <!-- About Nat -->
-<section id="about" class="py-24 md:py-32 bg-ic-cream">
+<section id="about" class="py-24 md:py-32 bg-ic-navy">
   <div class="max-w-[1200px] mx-auto px-8">
     <div class="grid md:grid-cols-2 gap-16 items-center">
       <div class="reveal aspect-[4/5] rounded-brand-lg overflow-hidden">
         <img src="{{ '/assets/images/' | append: site.data.about.image | relative_url }}" alt="{{ site.data.about.alt }}" class="w-full h-full object-cover">
       </div>
       <div class="reveal">
-        <p class="font-mono text-[0.64rem] font-medium tracking-[0.2em] uppercase text-ic-steel mb-4">{{ site.data.about.label }}</p>
-        <h2 class="font-display text-3xl md:text-[3rem] font-light text-ic-navy leading-[1.15] mb-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="block w-8 h-px bg-ic-gold"></span>
+          <p class="font-mono text-xs font-medium tracking-[0.2em] uppercase text-ic-gold">{{ site.data.about.label }}</p>
+        </div>
+        <h2 class="font-display text-3xl md:text-[3rem] font-light text-white leading-[1.15] mb-6">
           {{ site.data.about.heading }}
         </h2>
         {% for para in site.data.about.paragraphs %}
-        <p class="text-base font-light text-ic-text leading-relaxed mb-4">
+        <p class="text-lg font-light text-white/85 leading-relaxed mb-4">
           {{ para }}
         </p>
         {% endfor %}
-        <p class="font-display text-base font-light italic text-ic-ash leading-relaxed">
-          "{{ site.data.about.pullquote }}"
-        </p>
+        <blockquote class="mt-8 border-l-2 border-ic-gold pl-6">
+          <p class="font-display text-xl font-light italic text-white/90 leading-relaxed">
+            "{{ site.data.about.pullquote }}"
+          </p>
+        </blockquote>
       </div>
     </div>
   </div>
@@ -147,9 +128,12 @@ document.addEventListener('DOMContentLoaded', () => {
 <section id="testimonials" class="py-24 md:py-32 bg-white border-t border-b border-[rgba(28,40,86,0.1)]">
   <div class="max-w-[1200px] mx-auto px-8">
     <div class="reveal mb-16">
-      <p class="font-mono text-[0.64rem] font-medium tracking-[0.2em] uppercase text-ic-steel mb-4">From Our Community</p>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="block w-8 h-px bg-ic-gold"></span>
+        <p class="font-mono text-xs font-medium tracking-[0.2em] uppercase text-ic-steel">From Our Community</p>
+      </div>
       <h2 class="font-display text-3xl md:text-[3rem] font-light text-ic-navy leading-[1.15]">
-        What our riders say
+        Riders in their own words
       </h2>
     </div>
 
@@ -199,17 +183,20 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="max-w-[1200px] mx-auto px-8">
     <div class="grid md:grid-cols-2 gap-16 items-center">
       <div class="reveal">
-        <p class="font-mono text-[0.64rem] font-medium tracking-[0.2em] uppercase text-ic-steel mb-4">The Property</p>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="block w-8 h-px bg-ic-gold"></span>
+          <p class="font-mono text-xs font-medium tracking-[0.2em] uppercase text-ic-steel">The Property</p>
+        </div>
         <h2 class="font-display text-3xl md:text-[3rem] font-light text-ic-navy leading-[1.15] mb-6">
           Calgary Park, Berrima
         </h2>
-        <p class="text-base font-light text-ic-text leading-relaxed mb-8">
+        <p class="text-lg font-light text-ic-text leading-relaxed mb-8">
           Set in the heart of the Southern Highlands, Calgary Park is a peaceful, purpose-built equestrian property surrounded by beautiful Australian bushland — perfect for exploring and enjoying.
         </p>
         <ul class="space-y-3">
           {% for item in site.data.facilities %}
-          <li class="flex items-start gap-3 text-sm font-light text-ic-text">
-            <span class="text-ic-gold mt-0.5">&#10003;</span>
+          <li class="flex items-start gap-3 text-base font-normal text-ic-text">
+            <span class="text-ic-gold font-display leading-none mt-1">—</span>
             {{ item }}
           </li>
           {% endfor %}
@@ -223,12 +210,15 @@ document.addEventListener('DOMContentLoaded', () => {
 </section>
 
 <!-- FAQ -->
-<section id="faq" class="py-24 md:py-32 bg-white border-t border-b border-[rgba(28,40,86,0.1)]">
+<section id="faq" class="py-20 md:py-24 bg-white border-t border-b border-[rgba(28,40,86,0.1)]">
   <div class="max-w-3xl mx-auto px-8">
     <div class="reveal mb-16">
-      <p class="font-mono text-[0.64rem] font-medium tracking-[0.2em] uppercase text-ic-steel mb-4">Common Questions</p>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="block w-8 h-px bg-ic-gold"></span>
+        <p class="font-mono text-xs font-medium tracking-[0.2em] uppercase text-ic-steel">Common Questions</p>
+      </div>
       <h2 class="font-display text-3xl md:text-[3rem] font-light text-ic-navy leading-[1.15]">
-        Good questions — here are the answers
+        Frequently asked questions
       </h2>
     </div>
 
@@ -240,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <svg :class="open === {{ forloop.index }} ? 'rotate-180' : ''" class="w-4 h-4 text-ic-ash transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div x-show="open === {{ forloop.index }}" x-collapse class="px-6 pb-5">
-          <p class="text-sm font-light text-ic-ash leading-relaxed">{{ faq.answer }}</p>
+          <p class="text-base font-normal text-ic-text leading-relaxed">{{ faq.answer }}</p>
         </div>
       </div>
       {% endfor %}
@@ -251,12 +241,16 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- CTA / Contact -->
 <section id="contact" class="py-24 md:py-32 bg-ic-navy">
   <div class="max-w-3xl mx-auto px-8 text-center reveal">
-    <p class="font-mono text-[0.64rem] font-medium tracking-[0.2em] uppercase text-ic-sky mb-4">Get Started</p>
+    <div class="flex items-center justify-center gap-3 mb-4">
+      <span class="block w-8 h-px bg-ic-gold"></span>
+      <p class="font-mono text-xs font-medium tracking-[0.2em] uppercase text-ic-sky">Get Started</p>
+      <span class="block w-8 h-px bg-ic-gold"></span>
+    </div>
     <h2 class="font-display text-3xl md:text-[3rem] font-light text-white leading-[1.15] mb-4">
       Join the Inner Circle
     </h2>
-    <p class="text-base font-light text-white/50 leading-relaxed max-w-xl mx-auto mb-10">
-      Whether you're looking for agistment, lessons, or just a supportive place to enjoy your horse — we'd love to hear from you.
+    <p class="text-lg font-light text-white/75 leading-relaxed max-w-xl mx-auto mb-10">
+      No pressure. Just a conversation.
     </p>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
       <a href="tel:{{ site.data.site.contact.phone | replace: ' ', '' }}" class="px-6 py-2.5 rounded-brand bg-white/10 border border-white/20 hover:border-white/40 text-white text-sm font-medium tracking-wide transition">
@@ -266,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Message on Instagram
       </a>
     </div>
-    <p class="mt-10 text-sm font-light text-white/30">
+    <p class="mt-10 text-sm font-light text-white/60">
       {{ site.data.site.contact.location }}<br>
       {{ site.data.site.contact.region }}
     </p>

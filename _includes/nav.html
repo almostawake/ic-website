@@ -5,22 +5,29 @@
   class="fixed top-0 w-full z-50 transition-all duration-300"
 >
   <div class="max-w-[1200px] mx-auto px-8 py-4 flex items-center justify-between">
-    <a href="{{ '/' | relative_url }}" class="group">
-      <span :class="scrolled ? 'text-ic-navy' : 'text-white'" class="font-display text-xl font-normal tracking-tight transition-colors">
-        Inner Circle
-      </span>
-      <span :class="scrolled ? 'text-ic-steel' : 'text-white/60'" class="block font-sans text-[0.55rem] font-normal tracking-[0.25em] uppercase -mt-0.5 transition-colors">
-        Equestrian
+    <a href="{{ '/' | relative_url }}" class="group flex items-center gap-3">
+      <img
+        :src="scrolled ? '{{ '/brand/logo/ice-logo-icon.svg' | relative_url }}' : '{{ '/brand/logo/ice-logo-icon-reverse.svg' | relative_url }}'"
+        alt="Inner Circle Equestrian"
+        class="w-11 h-11 transition-opacity"
+      >
+      <span class="flex flex-col leading-none">
+        <span :class="scrolled ? 'text-ic-navy' : 'text-white'" class="font-display text-3xl font-normal tracking-tight transition-colors">
+          Inner Circle
+        </span>
+        <span :class="scrolled ? 'text-ic-steel' : 'text-white/70'" class="font-sans text-[0.94rem] font-normal tracking-[0.22em] uppercase mt-1 transition-colors">
+          Equestrian
+        </span>
       </span>
     </a>
 
     <!-- Desktop nav -->
     <div class="hidden md:flex items-center gap-8">
-      <a href="#about" :class="scrolled ? 'text-ic-ash hover:text-ic-navy' : 'text-white/70 hover:text-white'" class="font-sans text-xs font-medium tracking-[0.04em] uppercase transition">About</a>
-      <a href="#services" :class="scrolled ? 'text-ic-ash hover:text-ic-navy' : 'text-white/70 hover:text-white'" class="font-sans text-xs font-medium tracking-[0.04em] uppercase transition">Services</a>
-      <a href="#testimonials" :class="scrolled ? 'text-ic-ash hover:text-ic-navy' : 'text-white/70 hover:text-white'" class="font-sans text-xs font-medium tracking-[0.04em] uppercase transition">Community</a>
-      <a href="#facilities" :class="scrolled ? 'text-ic-ash hover:text-ic-navy' : 'text-white/70 hover:text-white'" class="font-sans text-xs font-medium tracking-[0.04em] uppercase transition">Facilities</a>
-      <a href="#contact" :class="scrolled ? 'bg-ic-navy text-white hover:bg-ic-navy/90' : 'border border-white/30 text-white hover:border-white/60'" class="text-xs font-medium tracking-[0.04em] uppercase px-5 py-2 rounded-brand transition">
+      <a href="#about" :class="scrolled ? 'text-ic-text hover:text-ic-navy' : 'text-white/85 hover:text-white'" class="font-sans text-sm font-medium tracking-[0.04em] uppercase transition">About</a>
+      <a href="#services" :class="scrolled ? 'text-ic-text hover:text-ic-navy' : 'text-white/85 hover:text-white'" class="font-sans text-sm font-medium tracking-[0.04em] uppercase transition">Services</a>
+      <a href="#testimonials" :class="scrolled ? 'text-ic-text hover:text-ic-navy' : 'text-white/85 hover:text-white'" class="font-sans text-sm font-medium tracking-[0.04em] uppercase transition">Community</a>
+      <a href="#facilities" :class="scrolled ? 'text-ic-text hover:text-ic-navy' : 'text-white/85 hover:text-white'" class="font-sans text-sm font-medium tracking-[0.04em] uppercase transition">Facilities</a>
+      <a href="#contact" x-show="scrolled" x-transition class="bg-ic-navy text-white hover:bg-ic-navy/90 text-sm font-medium tracking-[0.04em] uppercase px-5 py-2.5 rounded-brand transition">
         Get in Touch
       </a>
     </div>
