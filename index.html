@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="grid md:grid-cols-2 gap-6 stagger">
       {% for service in site.data.services %}
       <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg p-8 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-        <p class="font-mono text-[0.6rem] tracking-[0.1em] uppercase text-ic-steel mb-2">{{ service.label }}</p>
+        <p class="font-mono text-sm tracking-[0.1em] uppercase text-ic-steel mb-2">{{ service.label }}</p>
         <h3 class="font-display text-lg font-normal text-ic-navy mb-3">{{ service.title }}</h3>
         <p class="text-base font-normal text-ic-text leading-relaxed">
           {{ service.description }}
@@ -137,49 +137,98 @@ document.addEventListener('DOMContentLoaded', () => {
       </h2>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch stagger">
-      {% for t in site.data.testimonials %}
-      <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden flex flex-col" x-data="{ expanded: false }">
-        <div class="aspect-[3/2] overflow-hidden">
-          <img src="{{ '/assets/images/' | append: t.image | relative_url }}" alt="{{ t.alt }}" class="w-full h-full object-cover">
-        </div>
-        <div class="p-8 flex flex-col flex-1">
-          {% if t.full %}
-            <div x-show="!expanded" class="flex-1 flex flex-col">
-              {% for para in t.herald %}
-              <p class="font-display text-base font-normal italic text-ic-text leading-relaxed{% if forloop.first == false %} mt-4{% endif %}{% if forloop.last %} flex-1{% endif %}">
-                "{{ para }}"
-              </p>
-              {% endfor %}
-              <button type="button" @click="expanded = true" class="mt-4 self-start font-mono text-[0.6rem] tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; read more</button>
+    {% assign tcount = site.data.testimonials | size %}
+    <div
+      x-data="{
+        index: 0,
+        visible: 3,
+        paused: false,
+        timer: null,
+        count: {{ tcount }},
+        get maxIndex() { return Math.max(0, this.count - this.visible); },
+        get offset() { return this.index * (100 / this.count); },
+        updateVisible() {
+          const w = window.innerWidth;
+          this.visible = w >= 1024 ? 3 : w >= 768 ? 2 : 1;
+          if (this.index > this.maxIndex) this.index = this.maxIndex;
+        },
+        init() {
+          this.updateVisible();
+          window.addEventListener('resize', () => this.updateVisible());
+          this.timer = setInterval(() => {
+            if (!this.paused) this.index = this.index >= this.maxIndex ? 0 : this.index + 1;
+          }, 7000);
+        },
+        pause() {
+          if (this.paused) return;
+          this.paused = true;
+          clearInterval(this.timer);
+        },
+        goTo(i) { this.index = i; this.pause(); }
+      }"
+      class="reveal"
+      @click="pause()"
+    >
+      <div class="overflow-hidden">
+        <div
+          class="flex transition-transform duration-1000 ease-out items-stretch"
+          :style="`width: ${(count / visible) * 100}%; transform: translateX(-${offset}%)`"
+        >
+          {% for t in site.data.testimonials %}
+          <div class="px-3 flex" :style="`width: ${100 / count}%`">
+            <div class="bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg overflow-hidden flex flex-col w-full" x-data="{ expanded: false }">
+              <div class="aspect-[3/2] overflow-hidden">
+                <img src="{{ '/assets/images/' | append: t.image | relative_url }}" alt="{{ t.alt }}" class="w-full h-full object-cover">
+              </div>
+              <div class="p-10 flex flex-col flex-1">
+                {% if t.full %}
+                  <div x-show="!expanded" class="flex-1 flex flex-col">
+                    {% for para in t.herald %}
+                    <p class="font-display text-lg font-normal italic text-ic-text leading-relaxed{% if forloop.first == false %} mt-4{% endif %}{% if forloop.last %} flex-1{% endif %}">
+                      "{{ para }}"
+                    </p>
+                    {% endfor %}
+                    <button type="button" @click.stop="expanded = true; pause()" class="mt-5 self-start font-mono text-xs tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; read more</button>
+                  </div>
+                  <div x-show="expanded" x-collapse class="flex-1 flex flex-col">
+                    {% for para in t.full %}
+                    <p class="font-display text-lg font-normal italic text-ic-text leading-relaxed{% if forloop.first == false %} mt-4{% endif %}{% if forloop.last %} flex-1{% endif %}">
+                      "{{ para }}"
+                    </p>
+                    {% endfor %}
+                    <button type="button" @click.stop="expanded = false" class="mt-5 self-start font-mono text-xs tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; show less</button>
+                  </div>
+                {% else %}
+                  {% for para in t.herald %}
+                  <p class="font-display text-lg font-normal italic text-ic-text leading-relaxed{% if forloop.first == false %} mt-4{% endif %}{% if forloop.last %} flex-1{% endif %}">
+                    "{{ para }}"
+                  </p>
+                  {% endfor %}
+                {% endif %}
+                <div class="mt-6 pt-4 border-t border-[rgba(28,40,86,0.1)]">
+                  <p class="text-ic-navy"><span class="font-sans text-base font-medium">{{ t.name }}</span> <span class="font-sans text-base text-ic-ash">&amp;</span> <span class="font-sans text-base font-medium text-ic-ash">{{ t.horse }}</span></p>
+                </div>
+              </div>
             </div>
-            <div x-show="expanded" x-collapse class="flex-1 flex flex-col">
-              {% for para in t.full %}
-              <p class="font-display text-base font-normal italic text-ic-text leading-relaxed{% if forloop.first == false %} mt-4{% endif %}{% if forloop.last %} flex-1{% endif %}">
-                "{{ para }}"
-              </p>
-              {% endfor %}
-              <button type="button" @click="expanded = false" class="mt-4 self-start font-mono text-[0.6rem] tracking-[0.15em] uppercase text-ic-steel hover:text-ic-navy transition">&hellip; show less</button>
-            </div>
-          {% else %}
-            {% for para in t.herald %}
-            <p class="font-display text-base font-normal italic text-ic-text leading-relaxed{% if forloop.first == false %} mt-4{% endif %}{% if forloop.last %} flex-1{% endif %}">
-              "{{ para }}"
-            </p>
-            {% endfor %}
-          {% endif %}
-          <div class="mt-6 pt-4 border-t border-[rgba(28,40,86,0.1)]">
-            <p class="text-ic-navy"><span class="font-sans text-sm font-medium">{{ t.name }}</span> <span class="font-mono text-[0.68rem] tracking-[0.05em] text-ic-ash">&amp;</span> <span class="font-mono text-sm tracking-[0.05em] text-ic-ash">{{ t.horse }}</span></p>
           </div>
+          {% endfor %}
         </div>
       </div>
-      {% endfor %}
+
+      <div class="flex justify-center gap-2 mt-10" x-show="maxIndex > 0">
+        <template x-for="i in (maxIndex + 1)" :key="i">
+          <button @click.stop="goTo(i - 1)"
+                  :class="index === (i - 1) ? 'bg-ic-navy w-8' : 'bg-ic-navy/20 w-2 hover:bg-ic-navy/40'"
+                  class="h-2 rounded-full transition-all"
+                  :aria-label="`Go to slide ${i}`"></button>
+        </template>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Facilities -->
-<section id="facilities" class="py-24 md:py-32 bg-ic-cream">
+<section id="facilities" class="py-24 md:py-32 bg-[#E3EDF5]">
   <div class="max-w-[1200px] mx-auto px-8">
     <div class="grid md:grid-cols-2 gap-16 items-center">
       <div class="reveal">
