@@ -51,9 +51,12 @@ Read `brand/brand-pack.html` CSS and components before building any UI. The aest
 
 ### Brand source of truth
 - `brand/brand-pack.html` — visual brand bible (colours, type, logos, copy bank, mockups). This is upstream of everything else.
-- `brand/captions.json` — social media research archive (curated FB/IG posts with notes on best testimonials and brand copy).
 - `brand/logo/` — master logo assets (8 variants in PNG + SVG: full lockup, icon+wordmark, icon-only, text-only, each in navy + reverse white).
 - When making a brand decision, update `brand/` first, then propagate to `_data/site.yml` and templates.
+
+### Historical research (for when you need community voice, testimonials, or original rationale)
+- `brand/captions.json` — 80 curated Facebook and Instagram posts. Each entry has caption, date, comments, and a `note` field flagging the best material. Grep for `"note":` to find curation; look for `GREAT`, `OUTSTANDING`, `EXCELLENT`, `key brand messaging` to surface the strongest testimonials and copy.
+- `brand/research/IC_Brand_Palettes.pdf` — the original three-palette exploration (A Warm, B Classic, C Soft) that led to the Palette B decision. Historical context for why we chose what we chose.
 
 ## Technology
 
@@ -68,6 +71,10 @@ Contact info, colours, tagline, and values are defined in `_data/site.yml` and r
 
 ### Tailwind custom colors via config
 Brand colors are registered in the Tailwind config as custom colors (e.g. `ic-navy`, `ic-gold`) and used as utility classes throughout. Don't use hex codes directly in templates — always use the named color classes.
+
+### Dev server
+- Start: `bundle exec jekyll serve` (run in background, serves on :4000)
+- Stop: `lsof -ti:4000 | xargs kill`
 
 ### Keep deployment simple
 Use GitHub's built-in Pages builder (Deploy from branch), not a custom Actions workflow. No Node.js build step — Tailwind via CDN, Jekyll handles the rest. Avoid adding complexity unless there's a clear need.
