@@ -101,37 +101,15 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
 
     <div class="grid md:grid-cols-2 gap-6 stagger">
+      {% for service in site.data.services %}
       <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg p-8 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-        <p class="font-mono text-[0.6rem] tracking-[0.1em] uppercase text-ic-steel mb-2">Agistment</p>
-        <h3 class="font-display text-lg font-normal text-ic-navy mb-3">A safe, supported home for your horse</h3>
+        <p class="font-mono text-[0.6rem] tracking-[0.1em] uppercase text-ic-steel mb-2">{{ service.label }}</p>
+        <h3 class="font-display text-lg font-normal text-ic-navy mb-3">{{ service.title }}</h3>
         <p class="text-sm font-light text-ic-ash leading-relaxed">
-          Calm, community-focused agistment with individual private paddocks, horse-safe fencing, twice daily feeding, checking and rugging. Your horse is in safe hands — so you can relax.
+          {{ service.description }}
         </p>
       </div>
-
-      <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg p-8 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-        <p class="font-mono text-[0.6rem] tracking-[0.1em] uppercase text-ic-steel mb-2">Lessons</p>
-        <h3 class="font-display text-lg font-normal text-ic-navy mb-3">Tailored to you, not a template</h3>
-        <p class="text-sm font-light text-ic-ash leading-relaxed">
-          Bespoke training and lessons — whether you're rebuilding confidence, working on groundwork, or preparing to get back in the saddle. No rush, no assumptions.
-        </p>
-      </div>
-
-      <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg p-8 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-        <p class="font-mono text-[0.6rem] tracking-[0.1em] uppercase text-ic-steel mb-2">Horse Training</p>
-        <h3 class="font-display text-lg font-normal text-ic-navy mb-3">Professional schooling, your way</h3>
-        <p class="text-sm font-light text-ic-ash leading-relaxed">
-          Professional schooling aligned with your goals and your horse's temperament. Training is always done with care and in consultation with you — we respect the bond between you and your horse.
-        </p>
-      </div>
-
-      <div class="reveal bg-ic-cream border border-[rgba(28,40,86,0.1)] rounded-brand-lg p-8 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-        <p class="font-mono text-[0.6rem] tracking-[0.1em] uppercase text-ic-steel mb-2">Event Support</p>
-        <h3 class="font-display text-lg font-normal text-ic-navy mb-3">You never have to do it alone</h3>
-        <p class="text-sm font-light text-ic-ash leading-relaxed">
-          When you're ready, we'll help you load up, travel to events, and support you on the day. From your first outing to your personal best, we're right there with you.
-        </p>
-      </div>
+      {% endfor %}
     </div>
 
     <p class="text-sm font-light text-ic-ash mt-10 reveal">
@@ -145,21 +123,20 @@ document.addEventListener('DOMContentLoaded', () => {
   <div class="max-w-[1200px] mx-auto px-8">
     <div class="grid md:grid-cols-2 gap-16 items-center">
       <div class="reveal aspect-[4/5] rounded-brand-lg overflow-hidden">
-        <img src="{{ '/assets/images/nat-portrait.jpg' | relative_url }}" alt="Natalie Innes with horse at Calgary Park" class="w-full h-full object-cover">
+        <img src="{{ '/assets/images/' | append: site.data.about.image | relative_url }}" alt="{{ site.data.about.alt }}" class="w-full h-full object-cover">
       </div>
       <div class="reveal">
-        <p class="font-mono text-[0.64rem] font-medium tracking-[0.2em] uppercase text-ic-steel mb-4">Meet Natalie</p>
+        <p class="font-mono text-[0.64rem] font-medium tracking-[0.2em] uppercase text-ic-steel mb-4">{{ site.data.about.label }}</p>
         <h2 class="font-display text-3xl md:text-[3rem] font-light text-ic-navy leading-[1.15] mb-6">
-          Fun, inclusive, and endlessly patient
+          {{ site.data.about.heading }}
         </h2>
+        {% for para in site.data.about.paragraphs %}
         <p class="text-base font-light text-ic-text leading-relaxed mb-4">
-          Natalie Innes has spent 37 years with horses at every level — from grassroots to international. A British Horse Society Accredited Coach and Equestrian Australia qualified instructor, she's built her career around one belief: every rider deserves to feel supported.
+          {{ para }}
         </p>
-        <p class="text-base font-light text-ic-text leading-relaxed mb-4">
-          After running a successful equestrian business in the UK, Nat brought her experience to the Southern Highlands — creating a space where amateur horse owners can learn, grow, and enjoy their horses without pressure or judgement.
-        </p>
+        {% endfor %}
         <p class="font-display text-base font-light italic text-ic-ash leading-relaxed">
-          "I've been where many of my riders are — nervous, unsure, wanting to do right by my horse. That's exactly why I do this."
+          "{{ site.data.about.pullquote }}"
         </p>
       </div>
     </div>
@@ -230,34 +207,12 @@ document.addEventListener('DOMContentLoaded', () => {
           Set in the heart of the Southern Highlands, Calgary Park is a peaceful, purpose-built equestrian property surrounded by beautiful Australian bushland — perfect for exploring and enjoying.
         </p>
         <ul class="space-y-3">
+          {% for item in site.data.facilities %}
           <li class="flex items-start gap-3 text-sm font-light text-ic-text">
             <span class="text-ic-gold mt-0.5">&#10003;</span>
-            Fully lit indoor arena — 65m × 35m, Soiltex surface
+            {{ item }}
           </li>
-          <li class="flex items-start gap-3 text-sm font-light text-ic-text">
-            <span class="text-ic-gold mt-0.5">&#10003;</span>
-            Outdoor show jumping area
-          </li>
-          <li class="flex items-start gap-3 text-sm font-light text-ic-text">
-            <span class="text-ic-gold mt-0.5">&#10003;</span>
-            Private trail riding through native bushland
-          </li>
-          <li class="flex items-start gap-3 text-sm font-light text-ic-text">
-            <span class="text-ic-gold mt-0.5">&#10003;</span>
-            5 undercover holding yards adjacent to arena
-          </li>
-          <li class="flex items-start gap-3 text-sm font-light text-ic-text">
-            <span class="text-ic-gold mt-0.5">&#10003;</span>
-            4 wash bays including hot water
-          </li>
-          <li class="flex items-start gap-3 text-sm font-light text-ic-text">
-            <span class="text-ic-gold mt-0.5">&#10003;</span>
-            Stables, tack room, and day yards
-          </li>
-          <li class="flex items-start gap-3 text-sm font-light text-ic-text">
-            <span class="text-ic-gold mt-0.5">&#10003;</span>
-            Tea, coffee, bathroom, and shower facilities
-          </li>
+          {% endfor %}
         </ul>
       </div>
       <div class="reveal aspect-[4/3] rounded-brand-lg overflow-hidden">
