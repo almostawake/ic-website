@@ -53,9 +53,9 @@
     - "I am grateful every time I drive through the gates."
 
 - name: Jeri
-  horse:
+  horse: Wilbur
   image: testimonial-jeri.jpg
-  alt: "Jeri riding cross-country at Harden Horse Trials 2025"
+  alt: "Jeri riding Wilbur cross-country at Harden Horse Trials 2025"
   herald:
     - "I hadn't ridden in over 20 years and came back feeling unfit, rusty, and honestly not sure where to begin. Natalie completely changed that — she took me from 'I can't remember how to ride' to competing in eventing, and loving it."
   full:
