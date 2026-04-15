@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   {% endfor %}
                 {% endif %}
                 <div class="mt-6 pt-4 border-t border-[rgba(28,40,86,0.1)]">
-                  <p class="text-ic-navy"><span class="font-sans text-base font-medium">{{ t.name }}</span> <span class="font-sans text-base text-ic-ash">&amp;</span> <span class="font-sans text-base font-medium text-ic-ash">{{ t.horse }}</span></p>
+                  <p class="text-ic-navy"><span class="font-sans text-base font-medium">{{ t.name }}</span>{% if t.horse %} <span class="font-sans text-base text-ic-ash">&amp;</span> <span class="font-sans text-base font-medium text-ic-ash">{{ t.horse }}</span>{% endif %}</p>
                 </div>
               </div>
             </div>
