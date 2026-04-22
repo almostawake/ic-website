@@ -89,6 +89,6 @@ Avoid backends for as long as possible. Static is simpler, faster, and easier to
 Prefer `mcp__chrome-devtools__*` tools over `mcp__claude-in-chrome__*` extension tools — CDP is more reliable. Use the extension only if DevTools can't do what's needed.
 
 ### Git hygiene
-- `photos/` is gitignored — working/source photos stay local
+- `brand/photos/` — committed working/source photos (excluded from Jekyll build)
 - `assets/images/` is for committed site images only (optimised, final versions)
 - `brand/` is committed — it's the shareable brand source of truth
